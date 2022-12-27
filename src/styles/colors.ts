@@ -13,4 +13,6 @@ export const secondaryOrangeShade4 = '#DBAC96'
 export const secondaryYellowShade1 = '#E7B46C'
 export const secondaryYellowShade2 = '#E8BF83'
 export const secondaryYellowShade3 = '#EACA9A'
-export const secondaryYellowShade4 = 'ECD5B2'
+export const secondaryYellowShade4 = '#ECD5B2'
+
+export const lightGray = '#EEE'
