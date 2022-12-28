@@ -8,8 +8,6 @@ function App() {
     <div>
       <Header />
       <Landing />
-      <Landing />
-      <Landing />
     </div>
   )
 }

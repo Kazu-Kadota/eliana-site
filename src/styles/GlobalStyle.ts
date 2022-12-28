@@ -31,8 +31,26 @@ export default createGlobalStyle`
   h1 {
     /* margin-block-end: 0.67em;
     margin-block-start: 0.67em; */
-    margin-inline-end: 0px;
-    margin-inline-start: 0px;
+    /* margin-inline-end: 0px;
+    margin-inline-start: 0px; */
+    font-size: 4.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: 3.2rem;
+    font-weight: 400;
+  }
+
+  h4 {
+    font-size: 2.6rem;
+    font-weight: 400;
   }
 
   a {

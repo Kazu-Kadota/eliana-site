@@ -10,6 +10,7 @@ export const Aside = styled.aside`
   position: fixed;
   width: 100%;
   border-bottom: 0.1rem solid ${colors.lightGray};
+  z-index: 2;
 
   a > img {
     display: block;
@@ -20,13 +21,11 @@ export const Aside = styled.aside`
 `
 
 export const Container = styled.div`
-  max-width: 100%;
+  max-width: 100%; //Picture width. Need to be modified after changing background image
   gap: ${gapHeader};
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
+  padding: 0 10rem;
   background: ${colors.white};
 `
 
@@ -84,13 +83,13 @@ export const HeaderListSublist = styled.li`
 
   &:hover {
     display: block;
-    background: ${colors.white}
   }
 
   &:hover > div {
     visibility: visible;
+    background: ${colors.white};
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
   }
 
   &:hover > div > ul {
@@ -106,7 +105,7 @@ export const HeaderDropDown = styled.div`
   margin-top: 2.1rem;
   width: 100%;
   z-index: -1;
-  right: 0.2rem;
+  right: 0rem;
   justify-content: center;
   text-align: center;
   border-bottom: 0.1rem solid ${colors.lightGray};
