@@ -16,3 +16,4 @@ export const secondaryYellowShade3 = '#EACA9A'
 export const secondaryYellowShade4 = '#ECD5B2'
 
 export const lightGray = '#EEE'
+export const white = '#FFF'
