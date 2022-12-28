@@ -24,7 +24,7 @@ export const Landing = () => {
         </Box>
       </MainPage>
       <Pages>
-        <h1>texto</h1>
+        <h1>Emerson e Darlan</h1>
       </Pages>
     </Container>
   )
