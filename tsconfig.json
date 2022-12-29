@@ -23,8 +23,7 @@
     "strict": true,
     "baseUrl": "./",
     "paths": {
-      "src/*": ["src/*"],
-      "apollo/*": ["*"]
+      "src/*": ["src/*"]
     }
   },
   "include": [

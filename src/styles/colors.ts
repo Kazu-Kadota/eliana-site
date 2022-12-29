@@ -1,5 +1,3 @@
-export const baseYellow = '#F0EBE0'
-
 export const baseBlueShade1 = '#2F4269'
 export const baseBlueShade2 = '#556380'
 export const baseBlueShade3 = '#7C8598'
@@ -17,3 +15,5 @@ export const secondaryYellowShade4 = '#ECD5B2'
 
 export const lightGray = '#EEE'
 export const white = '#FFF'
+export const backgroundColor1 = '#F0EBE0'
+export const backgroundColor2 = '#EEE2CE'

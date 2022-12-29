@@ -33,12 +33,7 @@ export const MainPage = styled.div`
   }
 `
 
-export const Pages = styled.div`
-  width: 100%;
-  height: calc(100vh - ${header_height});
-`
-
-export const Box = styled.div`
+export const MainBox = styled.div`
   width: 50rem;
   box-sizing: content-box;
   height: auto;
@@ -50,7 +45,7 @@ export const Box = styled.div`
   justify-content: space-around;
 `
 
-export const Content = styled.div`
+export const MainContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,6 +72,85 @@ export const Content = styled.div`
 
   & > button:hover {
     background: ${colors.baseBlueShade1};
+    box-shadow: -2rem 2rem 1.5rem .5rem rgba(0, 0, 0, 0.5);
+    transform: translateY(-1rem);
+  }
+
+  & > button:hover > h3 {
+    color: ${colors.lightGray};
+  }
+
+  & > button > h3 {
+    font-weight: 700;
+  }
+`
+
+export const Pages = styled.div`
+  background-color: ${props => props.color};
+
+  & > div {
+    width: 100%;
+    height: calc(100vh - ${header_height});
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  & > div > img {
+    height: 70vh;
+    width: auto;
+    object-fit: cover;
+    object-position: 50% 40%;
+    border-radius: 1.5rem;
+    box-shadow: 0.5rem 0.5rem 1.0rem .2rem rgba(0, 0, 0, 0.3);
+  }
+`
+
+export const Box = styled.div`
+  width: 80rem;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  & > h1 {
+    color: ${colors.baseBlueShade1};
+    text-align: right;
+  }
+
+  & > h3 {
+    text-align: center;
+  }
+
+  & > a {
+    display: block;
+    font-size: 3.2rem;
+    color: ${colors.secondaryOrangeShade1}
+  }
+
+  & > a:link {
+    text-decoration: none;
+  }
+
+  & > a:visited {
+    text-decoration: none;
+  }
+
+  & > button {
+    background: ${colors.secondaryYellowShade1};
+    width: 48rem;
+    height: 8rem;
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    box-shadow: -1.5rem 1.5rem 1.0rem .2rem rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease 0s;
+  }
+
+  & > button:hover {
+    background: ${colors.secondaryOrangeShade3};
     box-shadow: -2rem 2rem 1.5rem .5rem rgba(0, 0, 0, 0.5);
     transform: translateY(-1rem);
   }
