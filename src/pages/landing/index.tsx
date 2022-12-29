@@ -4,9 +4,12 @@ import photo_main_page from 'src/assets/images/landing/Photo_Main_Page.png'
 import photo_page_2 from 'src/assets/images/landing/Photo_Page_2.jpeg'
 import photo_page_3 from 'src/assets/images/landing/Photo_Page_3.jpeg'
 import photo_page_4 from 'src/assets/images/landing/Photo_Page_4.jpeg'
+import photo_page_5_1 from 'src/assets/images/landing/Photo_Page_5_1.jpeg'
+import photo_page_5_2 from 'src/assets/images/landing/Photo_Page_5_2.jpeg'
+import photo_page_5_3 from 'src/assets/images/landing/Photo_Page_5_3.jpeg'
 import * as colors from 'src/styles/colors'
 
-import { Container, MainContent, MainPage, Pages, MainBox, Box } from './styles'
+import { Container, MainContent, MainPage, Pages, MainBox, Box, PhotoColection } from './styles'
 
 export const Landing = () => {
 
@@ -30,21 +33,8 @@ export const Landing = () => {
           </MainContent>
         </MainBox>
       </MainPage>
+
       <Pages color={colors.backgroundColor1}>
-        <div>
-          <Box>
-            <h1>+ de 20 anos acelerando carreiras e recolocações</h1>
-            <h3>Essa parte ou a próxima podiamos colocar alguma coisa
-              relacionado a seção &quot;Para pessoas&quot; ou
-              &quot;Para empresas&quot;, para fazer a chamada para esses
-              links.
-            </h3>
-            <a href="#">Saiba mais</a>
-          </Box>
-          <img src={photo_page_2} />
-        </div>
-      </Pages>
-      <Pages color={colors.backgroundColor2}>
         <div>
           <Box>
             <h1>+ de 30 anos cuidando de gente</h1>
@@ -55,9 +45,23 @@ export const Landing = () => {
             </h3>
             <a href="#">Saiba mais</a>
           </Box>
+          <img src={photo_page_2} />
+        </div>
+      </Pages>
+
+      <Pages color={colors.backgroundColor2}>
+        <div>
+          <Box>
+            <h1>Diferentes segmentos, diferentes desafios e diferentes soluções.</h1>
+            <h3>Varejo, indústria e serviços. Conheça as marcas que já foram
+              impulsionadas.
+            </h3>
+            <a href="#">Saiba mais</a>
+          </Box>
           <img src={photo_page_3} />
         </div>
       </Pages>
+
       <Pages color={colors.backgroundColor1}>
         <div>
           <Box>
@@ -73,6 +77,26 @@ export const Landing = () => {
           <img src={photo_page_4} />
         </div>
       </Pages>
+
+      <Pages color={colors.backgroundColor2}>
+        <div>
+          <PhotoColection>
+            <h1>Como eu te impulsiono</h1>
+            <div>
+              <img src={photo_page_5_1} />
+              <img src={photo_page_5_2} />
+              <img src={photo_page_5_3} />
+            </div>
+            <a href="#">Quero conhecer todas as formas de me impulsionar</a>
+          <aside>
+            <h2>Mentoria de Carreira</h2>
+            <h2>Palestras e treinamentos</h2>
+            <h2>Cursos online</h2>
+          </aside>
+          </PhotoColection>
+        </div>
+      </Pages>
+
     </Container>
   )
 }

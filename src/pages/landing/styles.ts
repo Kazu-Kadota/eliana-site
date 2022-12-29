@@ -130,14 +130,6 @@ export const Box = styled.div`
     color: ${colors.secondaryOrangeShade1}
   }
 
-  & > a:link {
-    text-decoration: none;
-  }
-
-  & > a:visited {
-    text-decoration: none;
-  }
-
   & > button {
     background: ${colors.secondaryYellowShade1};
     width: 48rem;
@@ -157,5 +149,54 @@ export const Box = styled.div`
 
   & > button > h3 {
     font-weight: 700;
+  }
+`
+
+export const PhotoColection = styled.div`
+  width: 80rem;
+  height: 70vh;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  & > h1 {
+    color: ${colors.baseBlueShade1}
+  }
+
+  & > a {
+    font-size: 2.6rem;
+    font-weight: 500;
+    color: ${colors.baseBlueShade1}
+  }
+
+  & > div {
+    padding: 8rem 0 5rem 0;
+    width: 75vw;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  & > div > img {
+    width: 25vw;
+    height: 25vw;
+    filter: brightness(60%);
+    object-fit: cover;
+    object-position: 50% 40%;
+    box-shadow: 0.5rem 0.5rem 1.0rem .2rem rgba(0, 0, 0, 0.3);
+  }
+
+  & > div > h2 {
+    position: relative;
+    bottom: 15rem;
+    width: 20vw;
+    color: ${colors.white};
+  }
+
+  & > aside {
+    width: 75vw;
+    display: flex;
+    justify-content: space-around;
   }
 `
