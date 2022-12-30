@@ -9,7 +9,18 @@ import photo_page_5_2 from 'src/assets/images/landing/Photo_Page_5_2.jpeg'
 import photo_page_5_3 from 'src/assets/images/landing/Photo_Page_5_3.jpeg'
 import * as colors from 'src/styles/colors'
 
-import { Container, MainContent, MainPage, Pages, MainBox, Box, PhotoColection } from './styles'
+import {
+  Container,
+  MainContent,
+  MainPage,
+  Pages,
+  MainBox,
+  Box,
+  PhotoColection,
+  ContentBlock,
+  ImagesBlock,
+  TextBlock,
+} from './styles'
 
 export const Landing = () => {
 
@@ -83,16 +94,26 @@ export const Landing = () => {
           <PhotoColection>
             <h1>Como eu te impulsiono</h1>
             <div>
-              <img src={photo_page_5_1} />
-              <img src={photo_page_5_2} />
-              <img src={photo_page_5_3} />
+              <ContentBlock>
+                <ImagesBlock src={photo_page_5_1} />
+                <TextBlock>
+                  <h2>Mentoria de Carreira</h2>
+                </TextBlock>
+              </ContentBlock>
+              <ContentBlock>
+                <ImagesBlock src={photo_page_5_2} />
+                <TextBlock>
+                  <h2>Palestras e treinamentos</h2>
+                </TextBlock>
+              </ContentBlock>
+              <ContentBlock>
+                <ImagesBlock src={photo_page_5_3} />
+                <TextBlock>
+                  <h2>Cursos online</h2>
+                </TextBlock>
+              </ContentBlock>
             </div>
             <a href="#">Quero conhecer todas as formas de me impulsionar</a>
-          <aside>
-            <h2>Mentoria de Carreira</h2>
-            <h2>Palestras e treinamentos</h2>
-            <h2>Cursos online</h2>
-          </aside>
           </PhotoColection>
         </div>
       </Pages>

@@ -177,26 +177,41 @@ export const PhotoColection = styled.div`
     display: flex;
     justify-content: space-around;
   }
+`
 
-  & > div > img {
-    width: 25vw;
-    height: 25vw;
-    filter: brightness(60%);
-    object-fit: cover;
-    object-position: 50% 40%;
-    box-shadow: 0.5rem 0.5rem 1.0rem .2rem rgba(0, 0, 0, 0.3);
+export const ContentBlock = styled.div`
+  width: 75vw;
+  height: auto;
+  top: 50vh;
+  justify-content: space-around;
+
+  &:hover {
+    transform: scale(1.1);
+    z-index: 1;
   }
 
-  & > div > h2 {
-    position: relative;
-    bottom: 15rem;
-    width: 20vw;
+  &:hover > div {
+    top: 23vh;
+  }
+`
+
+export const ImagesBlock = styled.img`
+  width: 25vw;
+  height: 25vw;
+  filter: brightness(60%);
+  object-fit: cover;
+  object-position: 50% 40%;
+  box-shadow: 0.5rem 0.5rem 1.0rem .2rem rgba(0, 0, 0, 0.3);
+`
+
+export const TextBlock = styled.div`
+  position: absolute;
+  padding-left: 2vw;
+  bottom: 33vh;
+
+  & > h2 {
     color: ${colors.white};
-  }
-
-  & > aside {
-    width: 75vw;
-    display: flex;
-    justify-content: space-around;
+    width: 17vw;
+    padding-right: 7rem;
   }
 `
