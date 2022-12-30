@@ -24,7 +24,7 @@ export default createGlobalStyle`
     width: 100%; */
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, p {
     font-family: 'DM Sans', sans-serif;
   }
 
@@ -48,7 +48,7 @@ export default createGlobalStyle`
     font-weight: 400;
   }
 
-  h4 {
+  h4, p {
     font-size: 2.6rem;
     font-weight: 400;
   }
