@@ -16,7 +16,7 @@ export const Aside = styled.aside`
     display: block;
     width: 100%;
     height: 4.4rem;
-    padding: 1rem 0.5rem;
+    margin: 1rem 0.5rem;
   }
 `
 
