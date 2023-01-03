@@ -101,7 +101,7 @@ export const Landing = () => {
               <ContentBlock>
                 <ImagesBlock src={photo_page_5_1} />
                 <TextBlock>
-                  <h2>Mentoria de Carreira</h2>
+                  Mentoria de Carreira
                 </TextBlock>
               </ContentBlock>
               <ContentBlock>

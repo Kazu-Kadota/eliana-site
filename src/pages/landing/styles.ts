@@ -99,7 +99,7 @@ export const Pages = styled.div`
   }
 
   & > div > img {
-    height: 70vh;
+    max-height: 70vh;
     width: auto;
     object-fit: cover;
     object-position: 50% 40%;
@@ -190,10 +190,6 @@ export const ContentBlock = styled.div`
     transform: scale(1.1);
     z-index: 1;
   }
-
-  &:hover > div {
-    top: 23vh;
-  }
 `
 
 export const ImagesBlock = styled.img`
@@ -205,16 +201,13 @@ export const ImagesBlock = styled.img`
   box-shadow: 0.5rem 0.5rem 1.0rem .2rem rgba(0, 0, 0, 0.3);
 `
 
-export const TextBlock = styled.div`
+export const TextBlock = styled.h2`
   position: absolute;
   padding-left: 2vw;
-  bottom: 33vh;
-
-  & > h2 {
-    color: ${colors.white};
-    width: 17vw;
-    padding-right: 7rem;
-  }
+  margin-top: -20rem;
+  color: ${colors.white};
+  width: 17vw;
+  padding-right: 7rem;
 `
 
 export const FooterPage = styled.div`
