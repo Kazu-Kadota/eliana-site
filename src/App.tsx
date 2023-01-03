@@ -1,6 +1,6 @@
 import React from 'react'
-import { Footerpage } from './components/footpage'
-import { Header } from './components/heading'
+import { Footerpage } from './components/desktop/footpage'
+import { Header } from './components/desktop/heading'
 
 import { Landing } from './pages/landing'
 

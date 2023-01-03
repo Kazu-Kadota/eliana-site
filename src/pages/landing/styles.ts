@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import * as colors from 'src/styles/colors'
 
 const header_height = '6.5rem'
+const footer_height = '40vh'
 
 export const Container = styled.section`
   position: relative;
@@ -98,7 +99,7 @@ export const Pages = styled.div`
   }
 
   & > div > img {
-    height: 70vh;
+    max-height: 70vh;
     width: auto;
     object-fit: cover;
     object-position: 50% 40%;
@@ -189,10 +190,6 @@ export const ContentBlock = styled.div`
     transform: scale(1.1);
     z-index: 1;
   }
-
-  &:hover > div {
-    top: 23vh;
-  }
 `
 
 export const ImagesBlock = styled.img`
@@ -204,14 +201,58 @@ export const ImagesBlock = styled.img`
   box-shadow: 0.5rem 0.5rem 1.0rem .2rem rgba(0, 0, 0, 0.3);
 `
 
-export const TextBlock = styled.div`
+export const TextBlock = styled.h2`
   position: absolute;
   padding-left: 2vw;
-  bottom: 33vh;
+  margin-top: -20rem;
+  color: ${colors.white};
+  width: 17vw;
+  padding-right: 7rem;
+`
 
-  & > h2 {
-    color: ${colors.white};
-    width: 17vw;
-    padding-right: 7rem;
+export const FooterPage = styled.div`
+  height: calc(100vh - ${header_height} - ${footer_height});
+  background-color: ${props => props.color};
+
+  & > h1 {
+    padding-top: 3vh;
+    text-align: center;
+    color: ${colors.baseBlueShade1}
+  }
+`
+
+export const SwipeBackground = styled.div`
+  width: 95vw;
+  height: 40vh;
+  margin: 0 auto;
+  margin-top: 3vh;
+`
+
+export const SwipeContainer = styled.div`
+  max-width: 130rem;
+  min-height: 30vh;
+  margin: auto;
+  background: ${colors.baseBlueShade1};
+  border-radius: 2rem;
+`
+
+export const SwipeContent = styled.div`
+  max-width: 114rem;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+  background: ${colors.white};
+  border-radius: 2rem;
+
+  & > div > p {
+    font-size: 2.1rem;
+  }
+
+  & > div > h3 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-align: center;
   }
 `
