@@ -212,47 +212,8 @@ export const TextBlock = styled.h2`
 
 export const FooterPage = styled.div`
   height: calc(100vh - ${header_height} - ${footer_height});
-  background-color: ${props => props.color};
-
-  & > h1 {
-    padding-top: 3vh;
-    text-align: center;
-    color: ${colors.baseBlueShade1}
-  }
-`
-
-export const SwipeBackground = styled.div`
-  width: 95vw;
-  height: 40vh;
-  margin: 0 auto;
-  margin-top: 3vh;
-`
-
-export const SwipeContainer = styled.div`
-  max-width: 130rem;
-  min-height: 30vh;
-  margin: auto;
-  background: ${colors.baseBlueShade1};
-  border-radius: 2rem;
-`
-
-export const SwipeContent = styled.div`
-  max-width: 114rem;
-  height: 25vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: auto;
-  background: ${colors.white};
-  border-radius: 2rem;
-
-  & > div > p {
-    font-size: 2.1rem;
-  }
-
-  & > div > h3 {
-    font-size: 2.6rem;
-    font-weight: bold;
-    text-align: center;
-  }
+  justify-content: center;
+  align-items: center;
+  background-color: ${props => props.color};
 `
