@@ -8,6 +8,7 @@ import photo_page_5_1 from 'src/assets/images/landing/Photo_Page_5_1.jpeg'
 import photo_page_5_2 from 'src/assets/images/landing/Photo_Page_5_2.jpeg'
 import photo_page_5_3 from 'src/assets/images/landing/Photo_Page_5_3.jpeg'
 import * as colors from 'src/styles/colors'
+import { Carousel } from './carousel'
 
 import {
   Container,
@@ -21,9 +22,6 @@ import {
   ImagesBlock,
   TextBlock,
   FooterPage,
-  SwipeContainer,
-  SwipeBackground,
-  SwipeContent,
 } from './styles'
 
 export const Landing = () => {
@@ -123,30 +121,7 @@ export const Landing = () => {
       </Pages>
 
       <FooterPage color={colors.backgroundColor1}>
-        <h1>Depoimentos</h1>
-        <SwipeBackground>
-          <SwipeContainer>
-            <SwipeContent>
-              <div>
-                <h3>Caique Toledo</h3>
-              </div>
-              <div>
-                <p>
-                  Quando busquei a assessoria da Eliana, já estava a algum tempo
-                  buscando outras oportunidades para sair do meu antigo trabalho.
-                  Após todo o processo de conversas e alterações realizadas tanto
-                  no meu CV quanto no meu perfil do LinkedIn, comecei a receber
-                  convites para entrevistas dos recrutadores diretamente pelo
-                  Linkedin. Em resumo, consegui a vaga que almejava em pouco
-                  menos de 3 semanas, e ainda hoje recebo mensagens para novas
-                  entrevistas. Obrigado Eliana por ter me ajudado a melhorar a
-                  maneira com que exponho minhas habilidades e experiências
-                  profissionais, isso fez total diferença.
-                </p>
-              </div>
-            </SwipeContent>
-          </SwipeContainer>
-        </SwipeBackground>
+        <Carousel />
       </FooterPage>
 
     </Container>
