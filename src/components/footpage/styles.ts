@@ -4,67 +4,58 @@ import * as colors from 'src/styles/colors'
 export const Container = styled.div`
   position: relative;
   width: 100%;
-  height: 40vh;
 `
 
 export const Upside = styled.div`
-  height: 21vh;
+  height: 20rem;
   background: ${colors.baseBlueShade1};
   display: flex;
   justify-content: space-between;
-  padding: 0 7vw;
+  padding: 0 15rem;
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
 `
 
 export const ColumnContent = styled.div `
   display: flex;
   flex-direction: column;
-  margin-top: 3vh;
+  margin-top: 3rem;
 
   h4 {
     color: ${colors.white};
-    padding-bottom: 2vh;
+    padding-bottom: 2rem;
     font-weight: 500;
   }
 
   a {
     color: ${colors.lightGray};
-    padding-bottom: 1vh;
+    padding-bottom: 1rem;
     font-size: 2rem;
-  }
-
-  a:visited {
-    text-decoration: none;
-  }
-
-  a:link {
-    text-decoration: none;
   }
 `
 
 export const DownSide = styled.div`
   width: 100%;
-  height: 19vh;
+  height: 17rem;
   background: ${colors.baseBlueShade1};
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   & > img {
-    width: 8vw;
+    width: 15rem;
     height: auto;
-    padding-left: 3vw;
+    padding-left: 5rem;
   }
 `
 
 export const Icons = styled.div`
-  width: 12vw;
+  width: 25rem;
   display: flex;
   justify-content: space-evenly;
-  padding-right: 3vw;
+  padding-right: 5rem;
 
   & > img {
-    width: 2vw;
+    width: 4rem;
     height: auto;
   }
 `
