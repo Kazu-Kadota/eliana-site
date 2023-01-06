@@ -2,9 +2,7 @@ import styled from 'styled-components'
 import config from 'src/styles/config'
 
 const colors = config.theme.colors
-
-const header_height = '6.5rem'
-const footer_height = '40vh'
+const variable = config.var
 
 export const Container = styled.section`
   position: relative;
@@ -14,25 +12,18 @@ export const MainPage = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: ${header_height};
+  margin-top: ${variable.header_height};
   width: 100%;
-  height: calc(100vh - ${header_height});
+  height: calc(100vh - ${variable.header_height});
 
   & > img {
     position: absolute;
     width: 100%;
-    height: calc(100vh - ${header_height});
+    height: calc(100vh - ${variable.header_height});
     object-fit: cover;
     object-position: 20% 0%;
     filter: blur(0.3rem);
     -webkit-filter: blur(00.3rem);
-  }
-
-  @media screen and (max-width: 97rem) {
-    & > div {
-      margin: 16rem 0;
-      right: 0;
-    }
   }
 `
 
@@ -46,12 +37,6 @@ export const MainBox = styled.div`
   right: 50rem;
   flex-direction: column;
   justify-content: space-around;
-`
-
-export const MainContent = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   & > h1 {
     color: ${colors.others.white};
@@ -93,7 +78,7 @@ export const Pages = styled.div`
 
   & > div {
     width: 100%;
-    height: calc(100vh - ${header_height});
+    height: calc(100vh - ${variable.header_height});
     position: relative;
     display: flex;
     justify-content: space-evenly;
@@ -107,51 +92,6 @@ export const Pages = styled.div`
     object-position: 50% 40%;
     border-radius: 1.5rem;
     box-shadow: 0.5rem 0.5rem 1.0rem .2rem rgba(0, 0, 0, 0.3);
-  }
-`
-
-export const Box = styled.div`
-  width: 80rem;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  & > h1 {
-    color: ${colors.base.blue.shade_1};
-    text-align: right;
-  }
-
-  & > h3 {
-    text-align: center;
-  }
-
-  & > a {
-    display: block;
-    font-size: 3.2rem;
-    color: ${colors.secondary.orange.shade_1}
-  }
-
-  & > button {
-    background: ${colors.secondary.yellow.shade_1};
-    width: 48rem;
-    height: 8rem;
-    border: none;
-    border-radius: 5rem;
-    cursor: pointer;
-    box-shadow: -1.5rem 1.5rem 1.0rem .2rem rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease 0s;
-  }
-
-  & > button:hover {
-    background: ${colors.secondary.orange.shade_3};
-    box-shadow: -2rem 2rem 1.5rem .5rem rgba(0, 0, 0, 0.5);
-    transform: translateY(-1rem);
-  }
-
-  & > button > h3 {
-    font-weight: 700;
   }
 `
 
@@ -213,7 +153,7 @@ export const TextBlock = styled.h2`
 `
 
 export const FooterPage = styled.div`
-  height: calc(100vh - ${header_height} - ${footer_height});
+  height: calc(100vh - ${variable.header_height} - ${variable.footer_height});
   display: flex;
   justify-content: center;
   align-items: center;
