@@ -1,19 +1,23 @@
 import styled from 'styled-components'
+import config from 'src/styles/config'
+
+const layouts = config.screens.sizes
+const colors = config.theme.colors
 
 export const Container = styled.div`
   display: grid;
   place-items: center;
-  width: 144rem;
+  width: ${layouts.dt_lg};
   height: 40rem;
   border-radius: 2rem;
-  background: #2F4269;
+  background: ${colors.base.blue.shade_1};
   box-shadow: 0 10rem 10rem rgba(0, 0, 0, 0.08);
 `
 
 export const CarouselBackground = styled.div`
   display: flex;
   flex-direction: column;
-  width: 135rem;
+  width: calc(${layouts.dt_lg} - 5rem);
   height: 38rem;
 
   .react-carousel {
@@ -39,11 +43,11 @@ export const CarouselBackground = styled.div`
   }
 
   .carousel .control-dots .dot {
-    background: #EEE;
+    background: ${colors.others.lightGray};
   }
 
   .carousel .control-dots .dot.selected {
-    background: #BC4E27;
+    background: ${colors.secondary.orange.shade_1};
     height: 1.3rem;
     width: 1.3rem;
   }
@@ -51,12 +55,12 @@ export const CarouselBackground = styled.div`
 
 export const ReactCarouselContainer = styled.div`
   margin-top: 1rem;
-  width: 135rem;
+  width: calc(${layouts.dt_lg} - 5rem);
   height: 33rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #FFFFFF;
+  background: ${colors.others.white};
   padding: 0 5rem;
 
   & > p {
@@ -66,7 +70,7 @@ export const ReactCarouselContainer = styled.div`
 `
 
 export const ReactCarouselTestimonyUser = styled.div`
-  margin-top: 5rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;

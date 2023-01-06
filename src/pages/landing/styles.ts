@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import * as colors from 'src/styles/colors'
+import config from 'src/styles/config'
+
+const colors = config.theme.colors
 
 const header_height = '6.5rem'
 const footer_height = '40vh'
@@ -52,16 +54,16 @@ export const MainContent = styled.div`
   align-items: center;
 
   & > h1 {
-    color: ${colors.white};
+    color: ${colors.others.white};
   }
 
   & > h3 {
-    color: ${colors.white};
+    color: ${colors.others.white};
     font-weight: 500;
   }
 
   & > button {
-    background: ${colors.secondaryYellowShade1};
+    background: ${colors.secondary.yellow.shade_1};
     width: 48rem;
     height: 8rem;
     border: none;
@@ -72,13 +74,13 @@ export const MainContent = styled.div`
   }
 
   & > button:hover {
-    background: ${colors.baseBlueShade1};
+    background: ${colors.base.blue.shade_1};
     box-shadow: -2rem 2rem 1.5rem .5rem rgba(0, 0, 0, 0.5);
     transform: translateY(-1rem);
   }
 
   & > button:hover > h3 {
-    color: ${colors.lightGray};
+    color: ${colors.others.lightGray};
   }
 
   & > button > h3 {
@@ -117,7 +119,7 @@ export const Box = styled.div`
   align-items: center;
 
   & > h1 {
-    color: ${colors.baseBlueShade1};
+    color: ${colors.base.blue.shade_1};
     text-align: right;
   }
 
@@ -128,11 +130,11 @@ export const Box = styled.div`
   & > a {
     display: block;
     font-size: 3.2rem;
-    color: ${colors.secondaryOrangeShade1}
+    color: ${colors.secondary.orange.shade_1}
   }
 
   & > button {
-    background: ${colors.secondaryYellowShade1};
+    background: ${colors.secondary.yellow.shade_1};
     width: 48rem;
     height: 8rem;
     border: none;
@@ -143,7 +145,7 @@ export const Box = styled.div`
   }
 
   & > button:hover {
-    background: ${colors.secondaryOrangeShade3};
+    background: ${colors.secondary.orange.shade_3};
     box-shadow: -2rem 2rem 1.5rem .5rem rgba(0, 0, 0, 0.5);
     transform: translateY(-1rem);
   }
@@ -163,13 +165,13 @@ export const PhotoColection = styled.div`
   align-items: center;
 
   & > h1 {
-    color: ${colors.baseBlueShade1}
+    color: ${colors.base.blue.shade_1}
   }
 
   & > a {
     font-size: 2.6rem;
     font-weight: 500;
-    color: ${colors.baseBlueShade1}
+    color: ${colors.base.blue.shade_1}
   }
 
   & > div {
@@ -205,7 +207,7 @@ export const TextBlock = styled.h2`
   position: absolute;
   padding-left: 2vw;
   margin-top: -20rem;
-  color: ${colors.white};
+  color: ${colors.others.white};
   width: 17vw;
   padding-right: 7rem;
 `

@@ -1,16 +1,25 @@
 import styled from 'styled-components'
 
-import * as colors from 'src/styles/colors'
-import { gapHeader } from 'src/styles/gap'
+import config from 'src/styles/config'
 
-export const Aside = styled.aside`
+const colors = config.theme.colors
+
+export const HeaderBlock = styled.aside`
   top: 0;
   left: 0;
   right: 0;
   position: fixed;
   width: 100%;
-  border-bottom: 0.1rem solid ${colors.lightGray};
+  border-bottom: 0.1rem solid ${colors.others.lightGray};
   z-index: 2;
+`
+
+export const Container = styled.div`
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rem;
+  background: ${colors.others.white};
 
   a > img {
     display: block;
@@ -20,27 +29,9 @@ export const Aside = styled.aside`
   }
 `
 
-export const Container = styled.div`
-  max-width: 100%; //Picture width. Need to be modified after changing background image
-  gap: ${gapHeader};
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10rem;
-  background: ${colors.white};
-`
-
-export const Nav = styled.nav`
-  ul {
-    display: flex;
-    list-style: none;
-  }
-
-  div:hover + li > div > ul {
-    display: block;
-  }
-`
-
 export const Ul = styled.ul`
+  display: flex;
+  list-style: none;
   justify-content: center;
   align-items: center;
 
@@ -50,11 +41,11 @@ export const Ul = styled.ul`
     padding: 2.15rem 1.5rem;
     font-weight: 500;
     font-size: 1.7rem;
-    color: ${colors.baseBlueShade1};
+    color: ${colors.base.blue.shade_1};
   }
 
   li a {
-    color: ${colors.baseBlueShade1};
+    color: ${colors.base.blue.shade_1};
   }
 `
 
@@ -66,7 +57,7 @@ export const HeaderList = styled.li`
     left: 50%;
     width: 0%;
     height: 0.2rem;
-    background: ${colors.secondaryOrangeShade1};
+    background: ${colors.secondary.orange.shade_1};
     transition: all 300ms ease-in-out;
   }
 
@@ -87,9 +78,10 @@ export const HeaderListSublist = styled.li`
 
   &:hover > div {
     visibility: visible;
-    background: ${colors.white};
+    background: ${colors.others.white};
     opacity: 1;
     z-index: 2;
+    transition: all 200ms ease-in-out;
   }
 
   &:hover > div > ul {
@@ -98,22 +90,25 @@ export const HeaderListSublist = styled.li`
 `
 
 export const HeaderDropDown = styled.div`
+  position: absolute;
+  width: 100%;
+  margin-top: 2.1rem;
+  right: 0rem;
+  text-align: center;
   visibility: hidden;
   opacity: 0;
-  display: flex;
-  position: absolute;
-  margin-top: 2.1rem;
-  width: 100%;
   z-index: -1;
-  right: 0rem;
-  justify-content: center;
-  text-align: center;
-  border-bottom: 0.1rem solid ${colors.lightGray};
-  border-right: 0.1rem solid ${colors.lightGray};
-  border-left: 0.1rem solid ${colors.lightGray};
 
   ul {
     display: none;
+    border-top: 0.1rem solid ${colors.others.lightGray};
+  }
+
+  ul > li {
+    max-width: 100%;
+    border-bottom: 0.1rem solid ${colors.others.lightGray};
+    border-right: 0.1rem solid ${colors.others.lightGray};
+    border-left: 0.1rem solid ${colors.others.lightGray};
   }
 
   ul li a {
