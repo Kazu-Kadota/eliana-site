@@ -1,5 +1,8 @@
 import styled from 'styled-components'
-import * as colors from 'src/styles/colors'
+
+import config from 'src/styles/config'
+
+const colors = config.theme.colors
 
 export const Container = styled.div`
   position: relative;
@@ -8,7 +11,7 @@ export const Container = styled.div`
 
 export const Upside = styled.div`
   height: 20rem;
-  background: ${colors.baseBlueShade1};
+  background: ${colors.base.blue.shade_1};
   display: flex;
   justify-content: space-between;
   padding: 0 15rem;
@@ -21,13 +24,13 @@ export const ColumnContent = styled.div `
   margin-top: 3rem;
 
   h4 {
-    color: ${colors.white};
+    color: ${colors.others.white};
     padding-bottom: 2rem;
     font-weight: 500;
   }
 
   a {
-    color: ${colors.lightGray};
+    color: ${colors.others.lightGray};
     padding-bottom: 1rem;
     font-size: 2rem;
   }
@@ -36,7 +39,7 @@ export const ColumnContent = styled.div `
 export const DownSide = styled.div`
   width: 100%;
   height: 17rem;
-  background: ${colors.baseBlueShade1};
+  background: ${colors.base.blue.shade_1};
   display: flex;
   justify-content: space-between;
   align-items: center;

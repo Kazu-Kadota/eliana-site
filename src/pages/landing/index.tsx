@@ -7,9 +7,9 @@ import photo_page_4 from 'src/assets/images/landing/Photo_Page_4.jpeg'
 import photo_page_5_1 from 'src/assets/images/landing/Photo_Page_5_1.jpeg'
 import photo_page_5_2 from 'src/assets/images/landing/Photo_Page_5_2.jpeg'
 import photo_page_5_3 from 'src/assets/images/landing/Photo_Page_5_3.jpeg'
-import * as colors from 'src/styles/colors'
-import { Carousel } from './carousel'
+import config from 'src/styles/config'
 
+import { Carousel } from './carousel'
 import {
   Container,
   MainContent,
@@ -23,6 +23,8 @@ import {
   TextBlock,
   FooterPage,
 } from './styles'
+
+const colors = config.theme.colors
 
 export const Landing = () => {
 
@@ -47,7 +49,7 @@ export const Landing = () => {
         </MainBox>
       </MainPage>
 
-      <Pages color={colors.backgroundColor1}>
+      <Pages color={colors.base.background.color_1}>
         <div>
           <Box>
             <h1>+ de 30 anos cuidando de gente</h1>
@@ -62,7 +64,7 @@ export const Landing = () => {
         </div>
       </Pages>
 
-      <Pages color={colors.backgroundColor2}>
+      <Pages color={colors.base.background.color_2}>
         <div>
           <Box>
             <h1>Diferentes segmentos, diferentes desafios e diferentes soluções.</h1>
@@ -75,7 +77,7 @@ export const Landing = () => {
         </div>
       </Pages>
 
-      <Pages color={colors.backgroundColor1}>
+      <Pages color={colors.base.background.color_1}>
         <div>
           <Box>
             <h1>Como dizer? a arte de dar e receber Feedback</h1>
@@ -91,7 +93,7 @@ export const Landing = () => {
         </div>
       </Pages>
 
-      <Pages color={colors.backgroundColor2}>
+      <Pages color={colors.base.background.color_2}>
         <div>
           <PhotoColection>
             <h1>Como eu te impulsiono</h1>
@@ -120,7 +122,7 @@ export const Landing = () => {
         </div>
       </Pages>
 
-      <FooterPage color={colors.backgroundColor1}>
+      <FooterPage color={colors.base.background.color_1}>
         <Carousel />
       </FooterPage>
 
