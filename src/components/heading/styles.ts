@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
 import * as colors from 'src/styles/colors'
-import { gapHeader } from 'src/styles/gap'
 
-export const Aside = styled.aside`
+export const HeaderBlock = styled.aside`
   top: 0;
   left: 0;
   right: 0;
@@ -11,6 +10,14 @@ export const Aside = styled.aside`
   width: 100%;
   border-bottom: 0.1rem solid ${colors.lightGray};
   z-index: 2;
+`
+
+export const Container = styled.div`
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rem;
+  background: ${colors.white};
 
   a > img {
     display: block;
@@ -20,27 +27,9 @@ export const Aside = styled.aside`
   }
 `
 
-export const Container = styled.div`
-  max-width: 100%; //Picture width. Need to be modified after changing background image
-  gap: ${gapHeader};
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10rem;
-  background: ${colors.white};
-`
-
-export const Nav = styled.nav`
-  ul {
-    display: flex;
-    list-style: none;
-  }
-
-  div:hover + li > div > ul {
-    display: block;
-  }
-`
-
 export const Ul = styled.ul`
+  display: flex;
+  list-style: none;
   justify-content: center;
   align-items: center;
 
@@ -90,6 +79,7 @@ export const HeaderListSublist = styled.li`
     background: ${colors.white};
     opacity: 1;
     z-index: 2;
+    transition: all 200ms ease-in-out;
   }
 
   &:hover > div > ul {
@@ -98,22 +88,25 @@ export const HeaderListSublist = styled.li`
 `
 
 export const HeaderDropDown = styled.div`
+  position: absolute;
+  width: 100%;
+  margin-top: 2.1rem;
+  right: 0rem;
+  text-align: center;
   visibility: hidden;
   opacity: 0;
-  display: flex;
-  position: absolute;
-  margin-top: 2.1rem;
-  width: 100%;
   z-index: -1;
-  right: 0rem;
-  justify-content: center;
-  text-align: center;
-  border-bottom: 0.1rem solid ${colors.lightGray};
-  border-right: 0.1rem solid ${colors.lightGray};
-  border-left: 0.1rem solid ${colors.lightGray};
 
   ul {
     display: none;
+    border-top: 0.1rem solid ${colors.lightGray};
+  }
+
+  ul > li {
+    max-width: 100%;
+    border-bottom: 0.1rem solid ${colors.lightGray};
+    border-right: 0.1rem solid ${colors.lightGray};
+    border-left: 0.1rem solid ${colors.lightGray};
   }
 
   ul li a {
