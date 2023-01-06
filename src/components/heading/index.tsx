@@ -1,5 +1,8 @@
 import React from 'react'
 
+import logo from 'src/assets/images/header/eliana-pita-consultoria.svg'
+import { HeaderListContent } from 'src/types/heading'
+
 import {
   HeaderBlock,
   Container,
@@ -8,8 +11,7 @@ import {
   HeaderDropDown,
   Ul
 } from './styles'
-import logo from 'src/assets/images/header/eliana-pita-consultoria.svg'
-import headerList, { HeaderListContent } from './content'
+import headerList from './content'
 
 export const Header = () => {
 

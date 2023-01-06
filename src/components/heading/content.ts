@@ -1,13 +1,6 @@
-export interface HeaderContent {
-  title: string
-  link: string
-}
+import { HeaderListContent } from "src/types/heading"
 
-export interface HeaderListContent extends HeaderContent {
-  sublist?: HeaderContent[]
-}
-
-const headerList = [
+const headerList: HeaderListContent[] = [
   {
     title: 'Sobre mim',
     link: '#',
