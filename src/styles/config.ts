@@ -53,8 +53,9 @@ const config = {
       dt_lg: 'min-width: 120rem',
     }
   },
-  gaps: {
-    header: '3rem',
+  var: {
+    header_height: '6.5rem',
+    footer_height: '40vh',
   },
 }
 

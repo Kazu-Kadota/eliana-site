@@ -1,12 +1,4 @@
-export interface Links {
-  content: string
-  href: string
-}
-
-export interface Content {
-  title: string
-  links: Links[]
-}
+import { Content } from "src/types/footpage"
 
 const contents: Content[] = [
   {

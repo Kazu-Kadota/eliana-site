@@ -1,12 +1,5 @@
 import perfil from 'src/assets/images/landing/Carousel/Perfil.jpeg'
-
-export interface Testimony {
-  name: string
-  last_name?: string
-  message: string
-  index: number
-  image: string
-}
+import { Testimony } from 'src/types/landing/carousel'
 
 const testimonies: Testimony[] = [
   {
