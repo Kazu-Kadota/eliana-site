@@ -8,6 +8,10 @@ const font_sizes = config.theme.font_sizes
 const screens = config.screens
 const variable = config.var
 
+interface ChevronArrowType {
+  $isOpen: boolean
+}
+
 export const HeaderBlock = styled.aside`
   top: 0;
   left: 0;
@@ -120,7 +124,7 @@ export const HeaderMenuButtonListContent = styled.li`
   }
 `
 
-export const ChevronArrowIcon = styled(RiArrowDropDownLine)`
+export const ChevronArrowIcon = styled(RiArrowDropDownLine)<ChevronArrowType>`
   rotate: ${(props) => props.$isOpen ? '180deg' : '0deg'};
   transition: rotate 500ms;
   color: ${colors.base.blue.shade_1}
