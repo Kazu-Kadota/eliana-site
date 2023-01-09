@@ -33,28 +33,34 @@ const config = {
       },
     },
     font_sizes: {
-      s_sm: '0.75rem',
-      s_lg: '1.5rem',
-      d_sm: '2rem',
-      d_lg: '3rem',
+      xs: '0.75rem',
+      sm: '1rem',
+      md: '1.5rem',
+      lg: '2.5rem',
+      xl: '3rem',
     }
   },
   screens: {
     sizes: {
       sp_sm: '32rem',
-      sp_lg: '64rem',
-      dt_sm: '76.8rem',
-      dt_lg: '128rem',
+      sp_lg: '76.8rem',
+      dt_sm: '102.4rem',
+      dt_lg: '144rem',
     },
     min_sizes: {
-      sp_sm: 'min-width: 30rem',
-      sp_lg: 'min-width: 48rem',
-      dt_sm: 'min-width: 76.8rem',
-      dt_lg: 'min-width: 120rem',
+      sp_sm: 'min-width: 320px',
+      sp_lg: 'min-width: 768px',
+      dt_sm: 'min-width: 1024px',
+      dt_lg: 'min-width: 1440px',
+    },
+    max_sizes: {
+      sp_sm: 'max-width: 767px',
+      sp_lg: 'max-width: 1023px',
+      dt_sm: 'max-width: 1439px',
     }
   },
   var: {
-    header_height: '6.5rem',
+    header_height: '6.2rem',
     footer_height: '40vh',
   },
 }

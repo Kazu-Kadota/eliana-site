@@ -72,4 +72,8 @@ export default createGlobalStyle`
   & > a:visited {
     text-decoration: none;
   }
+
+  .ReactCollapse--collapse {
+    transition: height 500ms;
+  }
 `

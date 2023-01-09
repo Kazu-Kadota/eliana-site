@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 
 import config from 'src/styles/config'
+import { RiArrowDropDownLine } from 'react-icons/ri'
 
 const colors = config.theme.colors
+const font_sizes = config.theme.font_sizes
+const screens = config.screens
+const variable = config.var
 
 export const HeaderBlock = styled.aside`
   top: 0;
@@ -11,36 +15,63 @@ export const HeaderBlock = styled.aside`
   position: fixed;
   width: 100%;
   border-bottom: 0.1rem solid ${colors.others.lightGray};
+  background: ${colors.others.white};
   z-index: 2;
 `
 
 export const Container = styled.div`
-  max-width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 10rem;
-  background: ${colors.others.white};
+  align-items: center;
 
   a > img {
     display: block;
     width: 100%;
-    height: 4.4rem;
+    height: 4.2rem;
     margin: 1rem 0.5rem;
+  }
+
+  @media (${screens.max_sizes.sp_sm}) {
+    margin: 0 3rem;
+
+    & > ul:first-of-type {
+      display: none;
+    }
+  }
+
+  @media (${screens.min_sizes.sp_lg}) {
+    padding: 0 2rem;
+
+    a, span {
+      font-size: ${font_sizes.md}
+    }
+  }
+
+  @media (${screens.min_sizes.dt_sm}) {
+    padding: 0 5rem;
+
+    a, span {
+      font-size: ${font_sizes.md}
+    }
+  }
+
+  @media (${screens.min_sizes.dt_lg}) {
+    padding: 0 10rem;
   }
 `
 
-export const Ul = styled.ul`
+export const HeaderList = styled.ul`
   display: flex;
   list-style: none;
   justify-content: center;
   align-items: center;
+  list-style-type: none;
 
   li {
     position: relative;
-    display: block;
-    padding: 2.15rem 1.5rem;
+    list-style-type: none;
+    padding: 2.1rem 1.2rem;
     font-weight: 500;
-    font-size: 1.7rem;
     color: ${colors.base.blue.shade_1};
   }
 
@@ -49,69 +80,48 @@ export const Ul = styled.ul`
   }
 `
 
-export const HeaderList = styled.li`
-  a::after {
-    content: '';
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    width: 0%;
-    height: 0.2rem;
-    background: ${colors.secondary.orange.shade_1};
-    transition: all 300ms ease-in-out;
-  }
+export const HeaderMenuButton = styled.button`
+  display: none;
+  background: none;
+  border: none;
+  height: 2.8rem;
 
-  a:hover::after {
-    width: 50%;
-    left: 25%;
-  }
-`
-
-export const HeaderListSublist = styled.li`
-  span {
-    cursor: default;
-  }
-
-  &:hover {
+  @media (${screens.max_sizes.sp_sm}) {
     display: block;
   }
 
-  &:hover > div {
-    visibility: visible;
-    background: ${colors.others.white};
-    opacity: 1;
-    z-index: 2;
-    transition: all 200ms ease-in-out;
-  }
-
-  &:hover > div > ul {
+  &:hover > ul {
     display: block;
   }
 `
 
-export const HeaderDropDown = styled.div`
+export const HeaderMenuButtonList = styled.ul`
   position: absolute;
+  display: block;
+  align-items: center;
+  left: 0;
+  top: ${variable.header_height};
   width: 100%;
-  margin-top: 2.1rem;
-  right: 0rem;
-  text-align: center;
-  visibility: hidden;
-  opacity: 0;
-  z-index: -1;
+  background: ${colors.others.white};
+  z-index: 1;
+`
 
-  ul {
-    display: none;
-    border-top: 0.1rem solid ${colors.others.lightGray};
-  }
+export const HeaderMenuButtonListContent = styled.li`
+  height: 8rem;
+  display: grid;
+  padding: 0 5rem;
+  border-bottom:  0.1rem solid ${colors.others.lightGray};
+  text-align: left;
+  align-content: center;
 
-  ul > li {
-    max-width: 100%;
-    border-bottom: 0.1rem solid ${colors.others.lightGray};
-    border-right: 0.1rem solid ${colors.others.lightGray};
-    border-left: 0.1rem solid ${colors.others.lightGray};
+  a {
+    font-size: ${font_sizes.lg};
+    color: ${colors.base.blue.shade_1};
   }
+`
 
-  ul li a {
-    justify-content: center;
-  }
+export const ChevronArrowIcon = styled(RiArrowDropDownLine)`
+  rotate: ${(props) => props.$isOpen ? '180deg' : '0deg'};
+  transition: rotate 500ms;
+  color: ${colors.base.blue.shade_1}
 `
