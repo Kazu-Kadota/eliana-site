@@ -14,7 +14,7 @@ interface HeaderDesktopListProps {
   content: HeaderListContentType
 }
 
-const headerDesktopList: React.FC<HeaderDesktopListProps> = ({
+const HeaderDesktopList: React.FC<HeaderDesktopListProps> = ({
   content
 }) => {
   const [isSubListShown, setSubListShown] = useState(false)
@@ -50,4 +50,4 @@ const headerDesktopList: React.FC<HeaderDesktopListProps> = ({
   )
 }
 
-export default headerDesktopList
+export default HeaderDesktopList
