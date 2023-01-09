@@ -47,7 +47,7 @@ export const Container = styled.div`
     padding: 0 2rem;
 
     a, span {
-      font-size: ${font_sizes.md}
+      font-size: ${font_sizes.sp.md}
     }
   }
 
@@ -55,7 +55,7 @@ export const Container = styled.div`
     padding: 0 5rem;
 
     a, span {
-      font-size: ${font_sizes.md}
+      font-size: ${font_sizes.sp.md}
     }
   }
 
@@ -119,7 +119,7 @@ export const HeaderMenuButtonListContent = styled.li`
   align-content: center;
 
   a {
-    font-size: ${font_sizes.lg};
+    font-size: ${font_sizes.sp.lg};
     color: ${colors.base.blue.shade_1};
   }
 `

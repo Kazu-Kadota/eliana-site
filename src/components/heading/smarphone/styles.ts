@@ -14,7 +14,7 @@ export const HeaderMenuButtonListContent = styled.li`
   align-content: center;
 
   a {
-    font-size: ${font_sizes.lg};
+    font-size: ${font_sizes.sp.lg};
     color: ${colors.base.blue.shade_1};
   }
 `
@@ -31,7 +31,7 @@ export const HeaderMenuButtonListSubList = styled.button`
   align-items: center;
 
   span {
-    font-size: ${font_sizes.lg};
+    font-size: ${font_sizes.sp.lg};
     color: ${colors.base.blue.shade_1};
   }
 

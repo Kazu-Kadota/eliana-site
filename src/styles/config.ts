@@ -33,11 +33,20 @@ const config = {
       },
     },
     font_sizes: {
-      xs: '0.75rem',
-      sm: '1rem',
-      md: '1.5rem',
-      lg: '2.5rem',
-      xl: '3rem',
+      sp: {
+        xs: '0.75rem',
+        sm: '1rem',
+        md: '1.5rem',
+        lg: '2.5rem',
+        xl: '3rem',
+      },
+      dt: {
+        xs: '2rem',
+        sm: '2.6rem',
+        md: '3.2rem',
+        lg: '3.6rem',
+        xl: '4.8rem',
+      }
     }
   },
   screens: {

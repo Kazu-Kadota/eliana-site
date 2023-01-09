@@ -34,7 +34,7 @@ export const HeaderButtonList = styled.button`
     cursor: default;
     color: ${colors.base.blue.shade_1};
     font-weight: 500;
-    font-size: ${font_size.md}
+    font-size: ${font_size.sp.md}
   }
 `
 
