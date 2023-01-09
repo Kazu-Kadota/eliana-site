@@ -37,15 +37,17 @@ const config = {
         xs: '0.75rem',
         sm: '1rem',
         md: '1.5rem',
-        lg: '2.5rem',
-        xl: '3rem',
+        lg: '2rem',
+        xl: '2.5rem',
+        xxl: '3rem',
       },
       dt: {
         xs: '2rem',
         sm: '2.6rem',
         md: '3.2rem',
         lg: '3.6rem',
-        xl: '4.8rem',
+        xl: '4rem',
+        xxl: '4.8rem',
       }
     }
   },
@@ -57,7 +59,7 @@ const config = {
       dt_lg: '144rem',
     },
     min_sizes: {
-      sp_sm: 'min-width: 320px',
+      sp_sm: 'min-width: 300px',
       sp_lg: 'min-width: 768px',
       dt_sm: 'min-width: 1024px',
       dt_lg: 'min-width: 1440px',
