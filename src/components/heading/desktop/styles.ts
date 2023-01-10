@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 import config from 'src/styles/config'
-import { RiArrowDropDownLine } from 'react-icons/ri'
 
 const colors = config.theme.colors
 const font_size = config.theme.font_sizes
@@ -24,17 +23,20 @@ export const HeaderListContent = styled.li`
   }
 `
 
-export const HeaderButtonList = styled.button`
+export const HeaderButtonList = styled.div`
   display: flex;
   align-items: center;
   border: none;
   background: ${colors.others.white};
+  padding: 2.1rem 1.2rem;
+  position: relative;
 
   h2 {
     cursor: default;
     color: ${colors.base.blue.shade_1};
     font-weight: 500;
-    font-size: ${font_size.sp.md}
+    font-size: ${font_size.sp.md};
+    text-align: center;
   }
 `
 
@@ -46,5 +48,18 @@ export const HeaderSubListContent = styled(HeaderListContent)`
   a:hover::after {
     width: 50%;
     left: 25%;
+  }
+`
+
+export const HeaderDesktopItem = styled.ul`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: ${colors.others.white};
+
+  a {
+    display: block;
+    text-align: center;
   }
 `

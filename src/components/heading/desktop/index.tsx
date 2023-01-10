@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { useState } from 'react'
 import { Collapse } from 'react-collapse'
 
 import { HeaderListContentType } from 'src/types/heading'
@@ -6,6 +6,7 @@ import { ChevronArrowIcon } from '../styles'
 
 import {
   HeaderButtonList,
+  HeaderDesktopItem,
   HeaderListContent,
   HeaderSubListContent,
 } from './styles'
@@ -26,27 +27,22 @@ const HeaderDesktopList: React.FC<HeaderDesktopListProps> = ({ content }) => {
   }
 
   return (
-    <Fragment>
-      <HeaderButtonList
-        onClick={() => {
-          setSubListShown((value) => !value)
-        }}
-      >
-        <h2>{content.title}</h2>
-        <ChevronArrowIcon size={20} $isOpen={isSubListShown} />
-      </HeaderButtonList>
-      {/* <Collapse isOpened={isSubListShown}> */}
-      {isSubListShown && (
-        <ul>
+    <HeaderButtonList
+      onMouseEnter={() => setSubListShown(true)}
+      onMouseLeave={() => setSubListShown(false)}
+    >
+      <h2>{content.title}</h2>
+      <ChevronArrowIcon size={20} $isOpen={isSubListShown} />
+      <HeaderDesktopItem>
+        <Collapse isOpened={isSubListShown}>
           {content.subList.map((sublist) => (
             <HeaderSubListContent key={sublist.title}>
               <a href={sublist.link}>{sublist.title}</a>
             </HeaderSubListContent>
           ))}
-        </ul>
-      )}
-      {/* </Collapse> */}
-    </Fragment>
+        </Collapse>
+      </HeaderDesktopItem>
+    </HeaderButtonList>
   )
 }
 
