@@ -24,9 +24,9 @@ export const Landing = () => {
       <BasicPages page_config={page_4}/>
       <PhotoColectionRender />
 
-      <FooterPage color={colors.base.background.color_1}>
+      {/* <FooterPage color={colors.base.background.color_1}>
         <Carousel />
-      </FooterPage>
+      </FooterPage> */}
 
     </Container>
   )

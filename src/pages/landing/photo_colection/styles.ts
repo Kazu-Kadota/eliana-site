@@ -2,8 +2,9 @@ import styled from 'styled-components'
 import config from 'src/styles/config'
 
 const colors = config.theme.colors
-const variable = config.var
+const font_sizes = config.theme.font_sizes
 const screens = config.screens
+const variable = config.var
 
 export const Pages = styled.div`
   position: relative;
@@ -16,42 +17,66 @@ export const Pages = styled.div`
 `
 
 export const PhotoColection = styled.div`
-  width: 80rem;
-  height: 70vh;
   margin-bottom: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 0 5rem;
 
   & > h1 {
-    color: ${colors.base.blue.shade_1}
+    font-size: ${font_sizes.sp.xl};
+    color: ${colors.base.blue.shade_1};
+
+    @media (${screens.min_sizes.sp_lg}) {
+      font-size: ${font_sizes.sp.xxl}
+    }
+
+    @media (${screens.min_sizes.dt_sm}) {
+      font-size: ${font_sizes.dt.xl}
+    }
+
+    @media (${screens.min_sizes.dt_lg}) {
+      font-size: ${font_sizes.dt.xxl}
+    }
   }
 
   & > a {
-    font-size: 2.6rem;
+    font-size: ${font_sizes.sp.md};
     font-weight: 500;
-    color: ${colors.base.blue.shade_1}
+    color: ${colors.base.blue.shade_1};
+
+    @media (${screens.min_sizes.sp_lg}) {
+      font-size: ${font_sizes.sp.lg};
+    }
+
+    @media (${screens.min_sizes.dt_sm}) {
+      font-size: ${font_sizes.dt.xs};
+    }
+
+    @media (${screens.min_sizes.dt_lg}) {
+      font-size: ${font_sizes.dt.sm};
+    }
   }
 `
 
 export const PhotoWrapper = styled.div`
   padding: 8rem 0 5rem 0;
-  width: 75vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 40rem;
 
-  @media (${screens.min_sizes.dt_sm}) {
+  @media (${screens.min_sizes.sp_lg}) {
     flex-direction: row;
+    max-width: 1124px;
   }
 `
 
 export const ContentBlock = styled.div`
-  width: 75vw;
-  height: auto;
-  top: 50vh;
+  flex: 1;
 
   &:hover {
     transform: scale(1.1);
@@ -60,8 +85,10 @@ export const ContentBlock = styled.div`
 `
 
 export const ImagesBlock = styled.img`
-  width: 25vw;
-  height: 25vw;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  vertical-align: top;
   filter: brightness(60%);
   object-fit: cover;
   object-position: 50% 40%;
@@ -71,8 +98,24 @@ export const ImagesBlock = styled.img`
 export const TextBlock = styled.h2`
   position: absolute;
   padding-left: 2vw;
-  margin-top: -20rem;
+  margin-top: -10rem;
   color: ${colors.others.white};
   width: 17vw;
   padding-right: 7rem;
+  font-size: ${font_sizes.sp.lg};
+
+  @media (${screens.min_sizes.sp_lg}) {
+    margin-top: -12rem;
+    font-size: ${font_sizes.sp.xl}
+  }
+
+  @media (${screens.min_sizes.dt_sm}) {
+    margin-top: -15rem;
+    font-size: ${font_sizes.dt.md}
+  }
+
+  @media (${screens.min_sizes.dt_lg}) {
+    margin-top: -20rem;
+    font-size: ${font_sizes.dt.lg}
+  }
 `
