@@ -9,24 +9,39 @@ const variable = config.var
 export const Pages = styled.div`
   position: relative;
   width: 100%;
-  height: calc(100vh - ${variable.header_height});
+  height: calc(150vh - ${variable.header_height});
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: ${props => props.color};
+
+  @media (${screens.min_sizes.sp_lg}) {
+    height: calc(120vh - ${variable.header_height});
+  }
+
+  @media (${screens.min_sizes.dt_sm}) {
+    height: calc(100vh - ${variable.header_height});
+  }
 `
 
 export const PhotoColection = styled.div`
-  margin-bottom: 10rem;
+  position: relative;
+  width: calc(100% -10rem);
+  max-height: 200vh;
+  min-height: calc(100vh - ${variable.header_height});
+  height: 100%;
+  padding: 0 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5rem;
+  background-color: ${props => props.color};
 
   & > h1 {
+    padding-top: 5rem;
     font-size: ${font_sizes.sp.xl};
     color: ${colors.base.blue.shade_1};
+    text-align: center;
 
     @media (${screens.min_sizes.sp_lg}) {
       font-size: ${font_sizes.sp.xxl}
@@ -42,9 +57,11 @@ export const PhotoColection = styled.div`
   }
 
   & > a {
+    padding-bottom: 5rem;
     font-size: ${font_sizes.sp.md};
     font-weight: 500;
     color: ${colors.base.blue.shade_1};
+    text-align: center;
 
     @media (${screens.min_sizes.sp_lg}) {
       font-size: ${font_sizes.sp.lg};
@@ -61,17 +78,17 @@ export const PhotoColection = styled.div`
 `
 
 export const PhotoWrapper = styled.div`
-  padding: 8rem 0 5rem 0;
+  padding: 5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 40rem;
+  max-width: 30rem;
 
-  @media (${screens.min_sizes.sp_lg}) {
+  @media (${screens.min_sizes.dt_sm}) {
     flex-direction: row;
-    max-width: 1124px;
+    max-width: 144rem;
   }
 `
 
@@ -86,6 +103,8 @@ export const ContentBlock = styled.div`
 
 export const ImagesBlock = styled.img`
   width: 100%;
+  min-height: 20rem;
+  max-height: 50rem;
   height: 100%;
   aspect-ratio: 1;
   vertical-align: top;
@@ -97,7 +116,7 @@ export const ImagesBlock = styled.img`
 
 export const TextBlock = styled.h2`
   position: absolute;
-  padding-left: 2vw;
+  padding-left: 3vw;
   margin-top: -10rem;
   color: ${colors.others.white};
   width: 17vw;
@@ -110,6 +129,7 @@ export const TextBlock = styled.h2`
   }
 
   @media (${screens.min_sizes.dt_sm}) {
+    padding-left: 2vw;
     margin-top: -15rem;
     font-size: ${font_sizes.dt.md}
   }

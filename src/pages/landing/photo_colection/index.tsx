@@ -16,8 +16,8 @@ const colors = config.theme.colors
 
 export const PhotoColectionRender: React.FC = () => {
   return (
-    <Pages color={colors.base.background.color_2}>
-      <PhotoColection>
+    // <Pages color={colors.base.background.color_2}>
+      <PhotoColection color={colors.base.background.color_2}>
         <h1>Como eu te impulsiono</h1>
         <PhotoWrapper>
           {photo_colection_content.map((block) => (
@@ -29,6 +29,6 @@ export const PhotoColectionRender: React.FC = () => {
         </PhotoWrapper>
         <a href="#">Quero conhecer todas as formas de me impulsionar</a>
       </PhotoColection>
-    </Pages>
+    // </Pages>
   )
 }
