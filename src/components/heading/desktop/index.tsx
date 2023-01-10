@@ -14,30 +14,29 @@ interface HeaderDesktopListProps {
   content: HeaderListContentType
 }
 
-const HeaderDesktopList: React.FC<HeaderDesktopListProps> = ({
-  content
-}) => {
+const HeaderDesktopList: React.FC<HeaderDesktopListProps> = ({ content }) => {
   const [isSubListShown, setSubListShown] = useState(false)
 
-  if(!content.subList) {
-    return <HeaderListContent key={content.title}>
-      <a href={content.link}>{content.title}</a>
-    </HeaderListContent>
+  if (!content.subList) {
+    return (
+      <HeaderListContent key={content.title}>
+        <a href={content.link}>{content.title}</a>
+      </HeaderListContent>
+    )
   }
 
   return (
     <Fragment>
-      <HeaderButtonList onClick={() => {
-        console.log(isSubListShown)
-        setSubListShown(value => !value)
-      }}>
+      <HeaderButtonList
+        onClick={() => {
+          setSubListShown((value) => !value)
+        }}
+      >
         <h2>{content.title}</h2>
-        <ChevronArrowIcon
-          size={20}
-          $isOpen={isSubListShown}
-        />
+        <ChevronArrowIcon size={20} $isOpen={isSubListShown} />
       </HeaderButtonList>
-      <Collapse isOpened={isSubListShown}>
+      {/* <Collapse isOpened={isSubListShown}> */}
+      {isSubListShown && (
         <ul>
           {content.subList.map((sublist) => (
             <HeaderSubListContent key={sublist.title}>
@@ -45,7 +44,8 @@ const HeaderDesktopList: React.FC<HeaderDesktopListProps> = ({
             </HeaderSubListContent>
           ))}
         </ul>
-      </Collapse>
+      )}
+      {/* </Collapse> */}
     </Fragment>
   )
 }
