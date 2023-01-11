@@ -27,24 +27,22 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 2rem;
+
+  & > ul:first-of-type {
+    display: none;
+  }
 
   a > img {
     display: block;
     width: 100%;
     height: 4.2rem;
-    margin: 1rem 0.5rem;
-  }
-
-  @media (${screens.max_sizes.sp_sm}) {
-    margin: 0 3rem;
-
-    & > ul:first-of-type {
-      display: none;
-    }
+    margin: 1rem 0;
   }
 
   @media (${screens.min_sizes.sp_lg}) {
     padding: 0 2rem;
+    margin: 0 3rem;
 
     a, span {
       font-size: ${font_sizes.sp.md}
@@ -53,6 +51,10 @@ export const Container = styled.div`
 
   @media (${screens.min_sizes.dt_sm}) {
     padding: 0 5rem;
+
+    & > ul:first-of-type {
+      display: flex;
+    }
 
     a, span {
       font-size: ${font_sizes.sp.md}
@@ -74,7 +76,7 @@ export const HeaderList = styled.ul`
   li {
     position: relative;
     list-style-type: none;
-    padding: 2.1rem 1.2rem;
+    padding: 2.1rem 2rem;
     font-weight: 500;
     color: ${colors.base.blue.shade_1};
   }
@@ -90,7 +92,7 @@ export const HeaderMenuButton = styled.button`
   border: none;
   height: 2.8rem;
 
-  @media (${screens.max_sizes.sp_sm}) {
+  @media (${screens.max_sizes.sp_lg}) {
     display: block;
   }
 
@@ -100,7 +102,7 @@ export const HeaderMenuButton = styled.button`
 `
 
 export const HeaderMenuButtonList = styled.ul`
-  position: absolute;
+  position: fixed;
   display: block;
   align-items: center;
   left: 0;

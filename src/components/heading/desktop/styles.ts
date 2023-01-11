@@ -28,7 +28,7 @@ export const HeaderButtonList = styled.div`
   align-items: center;
   border: none;
   background: ${colors.others.white};
-  padding: 2.1rem 1.2rem;
+  padding: 2.1rem 2rem;
   position: relative;
 
   h2 {
