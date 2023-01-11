@@ -6,24 +6,6 @@ const font_sizes = config.theme.font_sizes
 const screens = config.screens
 const variable = config.var
 
-export const Pages = styled.div`
-  position: relative;
-  width: 100%;
-  height: calc(150vh - ${variable.header_height});
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${props => props.color};
-
-  @media (${screens.min_sizes.sp_lg}) {
-    height: calc(120vh - ${variable.header_height});
-  }
-
-  @media (${screens.min_sizes.dt_sm}) {
-    height: calc(100vh - ${variable.header_height});
-  }
-`
-
 export const PhotoColection = styled.div`
   position: relative;
   width: calc(100% -10rem);
@@ -104,7 +86,6 @@ export const ContentBlock = styled.div`
 export const ImagesBlock = styled.img`
   width: 100%;
   min-height: 20rem;
-  max-height: 50rem;
   height: 100%;
   aspect-ratio: 1;
   vertical-align: top;

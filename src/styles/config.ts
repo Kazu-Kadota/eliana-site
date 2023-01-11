@@ -34,6 +34,7 @@ const config = {
     },
     font_sizes: {
       sp: {
+        xxs: '0.5rem',
         xs: '0.75rem',
         sm: '1rem',
         md: '1.5rem',
@@ -42,6 +43,7 @@ const config = {
         xxl: '3rem',
       },
       dt: {
+        xxs: '1.5rem',
         xs: '2rem',
         sm: '2.6rem',
         md: '3.2rem',
@@ -53,7 +55,7 @@ const config = {
   },
   screens: {
     sizes: {
-      sp_sm: '32rem',
+      sp_sm: '30rem',
       sp_lg: '76.8rem',
       dt_sm: '102.4rem',
       dt_lg: '144rem',

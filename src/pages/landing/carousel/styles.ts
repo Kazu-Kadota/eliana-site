@@ -1,45 +1,77 @@
 import styled from 'styled-components'
 import config from 'src/styles/config'
 
-const layouts = config.screens.sizes
 const colors = config.theme.colors
+const font_sizes = config.theme.font_sizes
+const screens = config.screens
+
+const carouselDesktopMinHeightSize = '35rem'
+
+export const SpaceContainer = styled.div`
+  height: 2rem;
+  background-color: ${props => props.color};
+
+  @media (${screens.min_sizes.dt_sm}) {
+    height: 5rem;
+  }
+`
+
+export const CarouselContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${props => props.color};
+`
 
 export const Container = styled.div`
   display: grid;
   place-items: center;
-  width: ${layouts.dt_lg};
-  height: 40rem;
+  min-width: calc(${screens.sizes.sp_sm} - 10rem);
+  max-width: calc(${screens.sizes.sp_sm} + 20rem);
+  width: 100%;
+  height: 100%;
   border-radius: 2rem;
   background: ${colors.base.blue.shade_1};
   box-shadow: 0 10rem 10rem rgba(0, 0, 0, 0.08);
+  margin: 0 5rem;
+
+  @media (${screens.min_sizes.dt_sm}) {
+    min-height: ${carouselDesktopMinHeightSize};
+    max-width: calc(${screens.sizes.dt_sm} + 30rem);
+  }
 `
 
 export const CarouselBackground = styled.div`
   display: flex;
   flex-direction: column;
-  width: calc(${layouts.dt_lg} - 5rem);
-  height: 38rem;
+  min-width: calc(${screens.sizes.sp_sm} - 10rem);
+  max-width: calc(${screens.sizes.sp_sm} + 50rem);
+  width: 100%;
+  height: 100%;
 
-  .react-carousel {
-    flex: 1 1 auto;
+  @media (${screens.min_sizes.dt_sm}) {
+    min-height: ${carouselDesktopMinHeightSize};
+    min-width: calc(${screens.sizes.dt_sm} - 10rem);
+    max-width: calc(${screens.sizes.dt_sm} + 50rem);
   }
 
-  .carousel .slide img {
-    width: 5rem;
-    height: 5rem;
-    object-fit: cover;
-    border-radius: 2.5rem;
+  .carousel-root {
+    padding: 2rem;
+    padding-bottom: 0;
+    flex: 1 1 auto;
   }
 
   .carousel {
     height: 100%;
+    margin-bottom: 3.5rem;
   }
 
   .carousel .control-dots {
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 0;
   }
 
   .carousel .control-dots .dot {
@@ -54,33 +86,46 @@ export const CarouselBackground = styled.div`
 `
 
 export const ReactCarouselContainer = styled.div`
-  margin-top: 1rem;
-  width: calc(${layouts.dt_lg} - 5rem);
-  height: 33rem;
+  max-width: calc(${screens.sizes.sp_sm} + 50rem);
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   background: ${colors.others.white};
-  padding: 0 5rem;
+  padding: 0 2.5rem;
+
+  @media (${screens.min_sizes.dt_sm}) {
+    min-height: ${carouselDesktopMinHeightSize};
+    min-width: calc(${screens.sizes.dt_sm} - 20rem);
+    max-width: calc(${screens.sizes.dt_sm} + 40rem);
+    padding: 0 5rem;
+  }
 
   & > p {
-    font-size: 2rem;
+    margin: 2rem 0;
+    font-size: ${font_sizes.sp.md};
     text-align: justify;
-  }
-`
 
-export const ReactCarouselTestimonyUser = styled.div`
-  margin-top: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-right: 8rem;
+    @media (${screens.min_sizes.sp_lg}) {
+      font-size: ${font_sizes.sp.lg};
+    }
 
-  & > div {
-    width: 3rem;
+    @media (${screens.min_sizes.dt_sm}) {
+      font-size: ${font_sizes.dt.xs};
+    }
   }
 
-  h1 {
-    font-size: 2.6rem;
+  & > h1 {
+    margin: 2rem 0;
+    font-size: ${font_sizes.sp.lg};
+
+    @media (${screens.min_sizes.sp_lg}) {
+      font-size: ${font_sizes.sp.xl};
+    }
+
+    @media (${screens.min_sizes.dt_sm}) {
+      font-size: ${font_sizes.dt.sm};
+    }
   }
 `
