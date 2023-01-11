@@ -3,5 +3,4 @@ export interface Testimony {
   last_name?: string
   message: string
   index: number
-  image: string
 }

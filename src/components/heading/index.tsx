@@ -1,51 +1,68 @@
-import React from 'react'
+import React, { createContext, useState } from 'react'
+import { Collapse } from 'react-collapse'
+import { IoMdMenu } from 'react-icons/io'
 
 import logo from 'src/assets/images/header/eliana-pita-consultoria.svg'
-import { HeaderListContent } from 'src/types/heading'
 
 import {
   HeaderBlock,
   Container,
   HeaderList,
-  HeaderListSublist,
-  HeaderDropDown,
-  Ul
+  HeaderMenuButton,
+  HeaderMenuButtonList,
 } from './styles'
 import headerList from './content'
+import HeaderDesktopList from './desktop'
+import HeaderSmartPhoneList from './smarphone'
+
+interface ShownDesktopStateType {
+  isShownDesktop: boolean
+  setShownDesktop: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const ShownDesktopContext = createContext<ShownDesktopStateType>({
+  isShownDesktop: false,
+  setShownDesktop: () => {false}
+})
 
 export const Header = () => {
-
-  const headerListRender = (content: HeaderListContent) => {
-    if(!content.sublist) {
-      return <HeaderList key={content.title}>
-        <a href={content.link}>{content.title}</a>
-      </HeaderList>
-    }
-
-    return <HeaderListSublist>
-      <span>{content.title}</span>
-      <HeaderDropDown>
-        <ul>
-          {content.sublist.map((sublist) => (
-            <HeaderList key={sublist.title}><a href={sublist.link}>{sublist.title}</a></HeaderList>
-          ))}
-        </ul>
-      </HeaderDropDown>
-    </HeaderListSublist>
-  }
+  const [isShownDesktop, setShownDesktop] = useState(false)
+  const [isShownSmartPhone, setShownSmartPhone] = useState(false)
 
   return (
-    <HeaderBlock>
-      <Container>
-        <a href="#">
-          <img src={logo} alt="" />
-        </a>
-        <Ul>
+    <>
+      <HeaderBlock>
+        <Container>
+          <a href="#">
+            <img src={logo} alt="" />
+          </a>
+          <HeaderList>
+            <ShownDesktopContext.Provider value={{
+              isShownDesktop,
+              setShownDesktop
+            }}>
+              {headerList.map((content) => (
+                <HeaderDesktopList key={content.title} content={content}/>
+              ))}
+            </ShownDesktopContext.Provider>
+          </HeaderList>
+          <HeaderMenuButton
+            onClick={() => {
+              setShownSmartPhone((value) => !value)
+            }}
+          >
+            <IoMdMenu size={30} />
+          </HeaderMenuButton>
+        </Container>
+      </HeaderBlock>
+
+      <HeaderMenuButtonList>
+        <Collapse isOpened={isShownSmartPhone}>
           {headerList.map((content) => (
-            headerListRender(content)
+            <HeaderSmartPhoneList key={content.title} content={content} />
           ))}
-        </Ul>
-      </Container>
-    </HeaderBlock>
+        </Collapse>
+      </HeaderMenuButtonList>
+    </>
   )
 }

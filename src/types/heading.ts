@@ -3,6 +3,6 @@ export interface HeaderContent {
   link: string
 }
 
-export interface HeaderListContent extends HeaderContent {
-  sublist?: HeaderContent[]
+export interface HeaderListContentType extends HeaderContent {
+  subList?: HeaderContent[]
 }

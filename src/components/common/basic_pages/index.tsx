@@ -7,22 +7,26 @@ import {
   Box,
 } from './styles'
 
-const basicPages = (page_config: BasicPage) => {
+interface BasicPageType {
+  page_config: BasicPage
+}
+
+const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
   const renderPages = (page_config: BasicPage) => {
     if(page_config.variation.a) {
       return (
-        <div>
+        <>
           <Box>
             <h1>{page_config.text.h1}</h1>
             <h3>{page_config.text.h3}</h3>
             <a href={page_config.variation.a}>Saiba mais</a>
           </Box>
           <img src={page_config.image} />
-        </div>
+        </>
       )
     } else if (page_config.variation.button) {
       return (
-        <div>
+        <>
           <Box>
             <h1>{page_config.text.h1}</h1>
             <h3>{page_config.text.h3}</h3>
@@ -31,7 +35,7 @@ const basicPages = (page_config: BasicPage) => {
             </button>
           </Box>
           <img src={page_config.image} />
-        </div>
+        </>
       )
     }
   }
@@ -43,4 +47,4 @@ const basicPages = (page_config: BasicPage) => {
   )
 }
 
-export default basicPages
+export default BasicPages

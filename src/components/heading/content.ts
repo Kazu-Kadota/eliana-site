@@ -1,6 +1,6 @@
-import { HeaderListContent } from "src/types/heading"
+import { HeaderListContentType } from 'src/types/heading'
 
-const headerList: HeaderListContent[] = [
+const headerList: HeaderListContentType[] = [
   {
     title: 'Sobre mim',
     link: '#',
@@ -16,7 +16,7 @@ const headerList: HeaderListContent[] = [
   {
     title: 'Para Pessoas',
     link: '#',
-    sublist: [
+    subList: [
       {
         title: 'Cursos',
         link: '#',
@@ -30,7 +30,7 @@ const headerList: HeaderListContent[] = [
   {
     title: 'Para Empresas',
     link: '#',
-    sublist: [
+    subList: [
       {
         title: 'Palestras e treinamentos',
         link: '#',
