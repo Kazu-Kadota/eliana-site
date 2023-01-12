@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import config from 'src/styles/config'
 import { photo_colection_content } from 'src/pages/landing/content_pages/photo_colection'
@@ -20,12 +21,14 @@ export const PhotoColectionRender: React.FC = () => {
       <PhotoWrapper>
         {photo_colection_content.map((block) => (
           <ContentBlock key={block.image}>
-            <ImagesBlock src={block.image} />
-            <TextBlock>{block.content}</TextBlock>
+            <Link to={block.url}>
+              <ImagesBlock src={block.image} />
+              <TextBlock>{block.content}</TextBlock>
+            </Link>
           </ContentBlock>
         ))}
       </PhotoWrapper>
-      <a href="#">Quero conhecer todas as formas de me impulsionar</a>
+      <Link to='/contato'>Quero conhecer todas as formas de me impulsionar</Link>
     </PhotoColection>
   )
 }

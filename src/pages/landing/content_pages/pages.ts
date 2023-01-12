@@ -14,7 +14,7 @@ export const page_2: BasicPage = {
     h3: 'Há mais de 30 anos eu seleciono, contrato, capacito, treino e desenvolvo pessoas e pude comprovar a enorme capacidade do ser humano, para mudar, desenvolver-se e evoluir, desde que use as estratégias certas.'
   },
   variation: {
-    a: '#',
+    a: '/sobre-mim',
   }
 }
 
@@ -26,7 +26,7 @@ export const page_3: BasicPage = {
     h3: 'Varejo, indústria e serviços. Conheça as marcas que já foram impulsionadas.'
   },
   variation: {
-    a: '#',
+    a: '/contato',
   }
 }
 
@@ -38,6 +38,6 @@ export const page_4: BasicPage = {
     h3: 'Quer saber como já impactei a vida de mais de 3.000 pessoas, ensinando a ferramenta mais efetiva para o desenvolvimento pessoal e profissional? (Sugestão de título e texto)'
   },
   variation: {
-    button: '#',
+    button: '/livro',
   }
 }

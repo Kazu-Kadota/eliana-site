@@ -3,15 +3,15 @@ import { HeaderListContentType } from 'src/types/heading'
 const headerList: HeaderListContentType[] = [
   {
     title: 'Sobre mim',
-    link: '#',
+    link: '/sobre-mim',
   },
   {
     title: 'Contato',
-    link: '#',
+    link: '/contato',
   },
   {
     title: 'Livro',
-    link: '#',
+    link: '/livro',
   },
   {
     title: 'Para Pessoas',
@@ -19,11 +19,11 @@ const headerList: HeaderListContentType[] = [
     subList: [
       {
         title: 'Cursos',
-        link: '#',
+        link: '/cursos',
       },
       {
         title: 'Mentorias',
-        link: '#',
+        link: '/mentorias',
       }
     ]
   },
@@ -33,11 +33,11 @@ const headerList: HeaderListContentType[] = [
     subList: [
       {
         title: 'Palestras e treinamentos',
-        link: '#',
+        link: '/palestras-e-treinamentos',
       },
       {
         title: 'Consultoria',
-        link: '#',
+        link: '/consultoria',
       }
     ]
   },

@@ -1,4 +1,4 @@
-import { Content } from "src/types/footpage"
+import { Content } from 'src/types/footpage'
 
 const contents: Content[] = [
   {
@@ -6,11 +6,11 @@ const contents: Content[] = [
     links: [
       {
         content: 'Sobre mim',
-        href: '#',
+        url: '/sobre-mim',
       },
       {
         content: 'Livro',
-        href: '#',
+        url: '/livro',
       },
     ],
   },
@@ -19,7 +19,7 @@ const contents: Content[] = [
     links: [
       {
         content: 'Contato',
-        href: '#',
+        url: '/contato',
       },
     ],
   },
@@ -28,11 +28,11 @@ const contents: Content[] = [
     links: [
       {
         content: 'Cursos',
-        href: '#',
+        url: '/cursos',
       },
       {
         content: 'Mentorias',
-        href: '#',
+        url: '/mentorias',
       },
     ],
   },
@@ -41,11 +41,11 @@ const contents: Content[] = [
     links: [
       {
         content: 'Palestras e treinamentos',
-        href: '#',
+        url: '/palestras-e-treinamentos',
       },
       {
         content: 'Consultoria',
-        href: '#',
+        url: '/consultoria',
       },
     ],
   },
