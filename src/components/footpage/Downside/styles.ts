@@ -20,7 +20,7 @@ export const DownSide = styled.div`
       padding: 2rem 0;
     }
 
-  & > img {
+  & > a > img {
     width: 15rem;
     height: auto;
     padding: 2rem 0;

@@ -14,7 +14,7 @@ import {
 
 const colors = config.theme.colors
 
-export const Carousel = () => {
+export const Carousel: React.FC = () => {
   return (
     <>
       <SpaceContainer color={colors.base.background.color_1}/>

@@ -1,6 +1,6 @@
 export interface Links {
   content: string
-  href: string
+  url: string
 }
 
 export interface Content {

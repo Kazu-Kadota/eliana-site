@@ -4,6 +4,7 @@ import {
   FaLinkedin,
   FaInstagram,
 } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 import logo from 'src/assets/images/footpage/Logo.svg'
 
@@ -17,7 +18,9 @@ export const DownsideRender: React.FC = () => {
   return (
     <>
       <DownSide>
-        <img src={logo}></img>
+        <Link to='/'>
+          <img src={logo}></img>
+        </Link>
         <RightContent>
           <Icons>
             <FaWhatsapp color='white'/>

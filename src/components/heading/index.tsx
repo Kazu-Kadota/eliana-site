@@ -14,6 +14,7 @@ import {
 import headerList from './content'
 import HeaderDesktopList from './desktop'
 import HeaderSmartPhoneList from './smarphone'
+import { Link } from 'react-router-dom'
 
 interface ShownDesktopStateType {
   isShownDesktop: boolean
@@ -25,7 +26,7 @@ export const ShownDesktopContext = createContext<ShownDesktopStateType>({
   setShownDesktop: () => {false}
 })
 
-export const Header = () => {
+export const Header: React.FC = () => {
   const [isShownDesktop, setShownDesktop] = useState(false)
   const [isShownSmartPhone, setShownSmartPhone] = useState(false)
 
@@ -33,9 +34,9 @@ export const Header = () => {
     <>
       <HeaderBlock>
         <Container>
-          <a href="#">
+          <Link to='/'>
             <img src={logo} alt="" />
-          </a>
+          </Link>
           <HeaderList>
             <ShownDesktopContext.Provider value={{
               isShownDesktop,

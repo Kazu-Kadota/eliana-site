@@ -10,7 +10,7 @@
         "color": "#424142"
       }
     ],
-    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare",
+    "editor.defaultFormatter": null,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
     }
@@ -22,7 +22,7 @@
         "color": "#424142"
       }
     ],
-    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare",
+    "editor.defaultFormatter": null,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
     }
