@@ -10,7 +10,7 @@ import {
   Container,
 } from './styles'
 
-export const Landing = () => {
+export const Landing: React.FC = () => {
 
   return (
     <Container>
