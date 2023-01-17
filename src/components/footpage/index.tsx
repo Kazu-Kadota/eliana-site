@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { DownsideRender } from './Downside'
-import { UpsideRender } from './Upside'
+import { DownsideRender } from './downside'
+import { UpsideRender } from './upside'
 import {
   Container,
 } from './styles'

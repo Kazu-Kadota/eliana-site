@@ -1,5 +1,5 @@
 import React from 'react'
-import BasicPages from 'src/components/common/basic_pages'
+import BasicPages from 'src/components/common/basic-pages'
 
 import Ebook from 'src/components/common/ebook'
 

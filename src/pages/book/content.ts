@@ -1,7 +1,7 @@
 import config from 'src/styles/config'
 import photo_page_1 from 'src/assets/images/book/page-1.png'
 import photo_page_2 from 'src/assets/images/book/page-2.png'
-import { BasicPage } from 'src/types/basic_page'
+import { BasicPage } from 'src/types/basic-page'
 
 const colors = config.theme.colors
 

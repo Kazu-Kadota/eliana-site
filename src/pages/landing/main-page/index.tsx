@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import photo_main_page from 'src/assets/images/landing/Photo_Main_Page.png'
+import photo_main_page from 'src/assets/images/landing/photo-main-page.png'
 
 import {
   MainBox,

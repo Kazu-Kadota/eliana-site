@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-import { BasicPage } from 'src/types/basic_page'
+import { BasicPage } from 'src/types/basic-page'
 
 import {
   Pages,

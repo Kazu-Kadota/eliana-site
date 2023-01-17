@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import config from 'src/styles/config'
-import { photo_colection_content } from 'src/pages/landing/content_pages/photo_colection'
+import { photo_colection_content } from 'src/pages/landing/content-pages/photo-colection'
 
 import {
   ContentBlock,
