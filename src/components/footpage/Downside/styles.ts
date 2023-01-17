@@ -69,7 +69,7 @@ export const Icons = styled.div`
     padding-right: 5rem;
   }
 
-  & > svg {
+  & > a > svg {
     width: 4rem;
     height: auto;
   }
