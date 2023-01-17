@@ -1,6 +1,7 @@
 import config from 'src/styles/config'
 import photo_page_1 from 'src/assets/images/book/page-1.png'
 import photo_page_2 from 'src/assets/images/book/page-2.png'
+import photo_page_3 from 'src/assets/images/book/page-3.png'
 import { BasicPage } from 'src/types/basic-page'
 
 const colors = config.theme.colors
@@ -25,7 +26,7 @@ const contents: BasicPage[] = [
   },
   {
     background_color: colors.base.background.color_2,
-    image: photo_page_2,
+    image: photo_page_3,
     text: {
       p1: 'Já vendi mais de 3.000 cópias físicas do livro e treinei centenas de pessoas em técnicas de feedback você pode adquirir meu livro digital e ter acesso à um treinamento gratuito sobre feedback através do link abaixo.',
       p2: 'Quer aprender mais sobre feedback? Então aproveita que você já está por aqui e clica agora mesmo!',
