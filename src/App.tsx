@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Footerpage } from './components/footpage'
 import { Header } from './components/heading'
 import InConstructionPage from './pages/construction'
+import ContactMe from './pages/contact-me'
 
 import { Landing } from './pages/landing'
 
@@ -13,7 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/sobre-mim' element={<InConstructionPage />} />
-        <Route path='/contato' element={<InConstructionPage />} />
+        <Route path='/contato' element={<ContactMe />} />
         <Route path='/livro' element={<InConstructionPage />} />
         <Route path='/cursos' element={<InConstructionPage />} />
         <Route path='/mentorias' element={<InConstructionPage />} />

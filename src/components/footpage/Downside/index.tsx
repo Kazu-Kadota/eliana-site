@@ -23,9 +23,15 @@ export const DownsideRender: React.FC = () => {
         </Link>
         <RightContent>
           <Icons>
-            <FaWhatsapp color='white'/>
-            <FaLinkedin color='white'/>
-            <FaInstagram color='white'/>
+            <a href="https://wa.me/5511976628899" target="_blank" rel="noreferrer noopener">
+              <FaWhatsapp color='white'/>
+            </a>
+            <a href="https://www.linkedin.com/in/elianapita/" target="_blank" rel="noreferrer noopener">
+              <FaLinkedin color='white'/>
+            </a>
+            <a href="https://www.instagram.com/elianapitaa/" target="_blank" rel="noreferrer noopener">
+              <FaInstagram color='white'/>
+            </a>
           </Icons>
           <p>© Eliana Pita. Todos os direitos reservados</p>
         </RightContent>
