@@ -10,6 +10,7 @@ export interface TextTypes {
 export interface PageLink {
   a: string
   button: string
+  external: boolean
 }
 
 export interface BasicPage {

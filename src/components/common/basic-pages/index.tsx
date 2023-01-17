@@ -58,6 +58,22 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
     }
 
     if(page_config.link?.a) {
+      if (page_config.link?.external) {
+        return (
+          <>
+            <Box>
+              {H1}
+              {p1}
+              {p2}
+              {p3}
+              {p4}
+              {p5}
+              <a href={page_config.link?.a}>Saiba mais</a>
+            </Box>
+            <img src={page_config.image} />
+          </>
+        )
+      }
       return (
         <>
           <Box>
@@ -73,6 +89,26 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
         </>
       )
     } else if (page_config.link?.button) {
+      if (page_config.link?.external) {
+        return (
+          <>
+            <Box>
+              {H1}
+              {p1}
+              {p2}
+              {p3}
+              {p4}
+              {p5}
+              <a href={page_config.link.button} target="_blank" rel="noreferrer noopener">
+                <button onClick={redirectPage}>
+                  <h3>Saiba mais</h3>
+                </button>
+              </a>
+            </Box>
+            <img src={page_config.image} />
+          </>
+        )
+      }
       return (
         <>
           <Box>

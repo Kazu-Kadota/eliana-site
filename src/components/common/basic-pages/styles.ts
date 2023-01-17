@@ -129,6 +129,52 @@ export const Box = styled.div`
     @media (${screens.min_sizes.dt_lg}) {
       font-size: ${font_sizes.dt.md};
     }
+
+    & > button {
+      background: ${colors.secondary.yellow.shade_1};
+      max-width: 50rem;
+      width: 75vw;
+      min-height: 4rem;
+      max-height: 6rem;
+      height: 7vh;
+      border: none;
+      border-radius: 5rem;
+      cursor: pointer;
+      box-shadow: -1.5rem 1.5rem 1.0rem .2rem rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease 0s;
+
+      @media (${screens.min_sizes.dt_sm}) {
+        width: 50rem;
+        height: 6rem;
+      }
+
+      @media (${screens.min_sizes.dt_lg}) {
+        height: 8rem;
+      }
+    }
+
+    & > button:hover {
+      background: ${colors.secondary.orange.shade_3};
+      box-shadow: -2rem 2rem 1.5rem .5rem rgba(0, 0, 0, 0.5);
+      transform: translateY(-1rem);
+    }
+
+    & > button > h3 {
+      font-size: ${font_sizes.sp.lg};
+      font-weight: 700;
+
+      @media (${screens.min_sizes.sp_lg}) {
+        font-size: ${font_sizes.sp.xl};
+      }
+
+      @media (${screens.min_sizes.dt_sm}) {
+        font-size: ${font_sizes.dt.sm};
+      }
+
+      @media (${screens.min_sizes.dt_lg}) {
+        font-size: ${font_sizes.dt.md};
+      }
+    }
   }
 
   & > button {
