@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-import logo from 'src/assets/images/footpage/Logo.svg'
+import logo from 'src/assets/images/footpage/logo.svg'
 
 import {
   DownSide,

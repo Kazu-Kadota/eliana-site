@@ -1,5 +1,6 @@
 import React from 'react'
-import Ebook from './ebook'
+
+import Ebook from 'src/components/common/ebook'
 
 import { Container } from './styles'
 import TalkToMe from './talk-to-me'

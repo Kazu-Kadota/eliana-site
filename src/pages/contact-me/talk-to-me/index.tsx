@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 import { ContactType } from 'src/types/contact-me'
 import Instagram from 'src/assets/icons/colorful-instagram.png'
-import contactImage from 'src/assets/images/contact_me/contact.png'
+import contactImage from 'src/assets/images/contact-me/contact.png'
 
 import { ContactWrapper, Container, Image, RowContent, SocialContent } from './styles'
 

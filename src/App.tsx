@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Footerpage } from './components/footpage'
 import { Header } from './components/heading'
+import BookPage from './pages/book'
 import InConstructionPage from './pages/construction'
 import ContactMe from './pages/contact-me'
 
@@ -15,7 +16,7 @@ function App() {
         <Route path='/' element={<Landing />} />
         <Route path='/sobre-mim' element={<InConstructionPage />} />
         <Route path='/contato' element={<ContactMe />} />
-        <Route path='/livro' element={<InConstructionPage />} />
+        <Route path='/livro' element={<BookPage />} />
         <Route path='/cursos' element={<InConstructionPage />} />
         <Route path='/mentorias' element={<InConstructionPage />} />
         <Route path='/palestras-e-treinamentos' element={<InConstructionPage />} />

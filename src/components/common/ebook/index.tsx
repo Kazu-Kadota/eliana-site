@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ebookImage from 'src/assets/images/contact_me/ebook.png'
+import ebookImage from 'src/assets/images/contact-me/ebook.png'
 
 import {
   Container,

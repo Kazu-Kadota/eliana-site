@@ -1,23 +1,23 @@
 export interface TextTypes {
   h1: string
-  h2: string
-  h3: string
-  h4: string
-  h5: string
-  h6: string
-  p: string
+  p1: string
+  p2: string
+  p3: string
+  p4: string
+  p5: string
 }
 
-export interface PageVariation {
+export interface PageLink {
   a: string
   button: string
+  external: boolean
 }
 
 export interface BasicPage {
   background_color: string
-  image: string
-  text: Partial<TextTypes>
-  variation: Partial<PageVariation>
+  image?: string
+  text?: Partial<TextTypes>
+  link?: Partial<PageLink>
 }
 
 export interface PhotoColectionContent {
