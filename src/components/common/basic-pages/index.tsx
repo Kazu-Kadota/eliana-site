@@ -100,7 +100,7 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
               {p4}
               {p5}
               <a href={page_config.link.button} target="_blank" rel="noreferrer noopener">
-                <button onClick={redirectPage}>
+                <button>
                   <h3>Saiba mais</h3>
                 </button>
               </a>
