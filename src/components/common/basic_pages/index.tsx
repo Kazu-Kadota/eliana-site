@@ -17,7 +17,7 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
 
   const redirectPage = () => {
     navigate(
-      `${page_config.variation.button}`,
+      `${page_config.link?.button}`,
       {
         replace: true,
         relative: 'path',
@@ -26,23 +26,62 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
   }
 
   const renderPages = (page_config: BasicPage) => {
-    if(page_config.variation.a) {
+    let H1: JSX.Element | undefined = undefined
+    let p1: JSX.Element | undefined = undefined
+    let p2: JSX.Element | undefined = undefined
+    let p3: JSX.Element | undefined = undefined
+    let p4: JSX.Element | undefined = undefined
+    let p5: JSX.Element | undefined = undefined
+
+    if(page_config.text?.h1) {
+      H1 = <h1>{page_config.text?.h1}</h1>
+    }
+
+    if(page_config.text?.p1) {
+      p1 = <p>{page_config.text?.p1}</p>
+    }
+
+    if(page_config.text?.p2) {
+      p2 = <p>{page_config.text?.p2}</p>
+    }
+
+    if(page_config.text?.p3) {
+      p3 = <p>{page_config.text?.p3}</p>
+    }
+
+    if(page_config.text?.p4) {
+      p4 = <p>{page_config.text?.p4}</p>
+    }
+
+    if(page_config.text?.p5) {
+      p5 = <p>{page_config.text?.p5}</p>
+    }
+
+    if(page_config.link?.a) {
       return (
         <>
           <Box>
-            <h1>{page_config.text.h1}</h1>
-            <h3>{page_config.text.h3}</h3>
-            <Link to={page_config.variation.a}>Saiba mais</Link>
+            {H1}
+            {p1}
+            {p2}
+            {p3}
+            {p4}
+            {p5}
+            <Link to={page_config.link?.a}>Saiba mais</Link>
           </Box>
           <img src={page_config.image} />
         </>
       )
-    } else if (page_config.variation.button) {
+    } else if (page_config.link?.button) {
       return (
         <>
           <Box>
-            <h1>{page_config.text.h1}</h1>
-            <h3>{page_config.text.h3}</h3>
+            {H1}
+            {p1}
+            {p2}
+            {p3}
+            {p4}
+            {p5}
             <button onClick={redirectPage}>
               <h3>Saiba mais</h3>
             </button>
@@ -51,6 +90,20 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
         </>
       )
     }
+
+    return (
+      <>
+        <Box>
+            {H1}
+            {p1}
+            {p2}
+            {p3}
+            {p4}
+            {p5}
+        </Box>
+        <img src={page_config.image} />
+      </>
+    )
   }
 
   return (

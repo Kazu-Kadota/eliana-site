@@ -91,26 +91,25 @@ export const Box = styled.div`
       text-align: right;
     }
 
-    @media (${screens.min_sizes.dt_sm}) {
+    @media (${screens.min_sizes.dt_lg}) {
       font-size: ${font_sizes.dt.xxl};
     }
   }
 
-  & > h3 {
-    font-size: ${font_sizes.sp.md};
-    text-align: left;
+  & > p {
+    font-size: ${font_sizes.sp.sm};
+    text-align: justify;
 
     @media (${screens.min_sizes.sp_sm}) {
-      font-size: ${font_sizes.sp.lg};
+      font-size: ${font_sizes.sp.md};
     }
 
     @media (${screens.min_sizes.sp_lg}) {
-      font-size: ${font_sizes.sp.xl};
+      font-size: ${font_sizes.sp.lg};
     }
 
     @media (${screens.min_sizes.dt_sm}) {
       font-size: ${font_sizes.dt.sm};
-      text-align: center;
     }
 
     @media (${screens.min_sizes.dt_lg}) {
