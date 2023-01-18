@@ -6,8 +6,6 @@ import {
 } from 'src/components/common/basic-pages/styles'
 import config from 'src/styles/config'
 
-const colors = config.theme.colors
-const font_sizes = config.theme.font_sizes
 const variable = config.var
 const screens = config.screens
 
