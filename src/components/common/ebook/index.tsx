@@ -12,7 +12,7 @@ const Ebook: React.FC = () => {
   return (
     <Container>
       <EbookContainer>
-        <h1>Ganhe um book</h1>
+        <h1>Ganhe um e-book</h1>
         <h2>Preencha os campos abaixo</h2>
         <EbookForms action="">
           <label htmlFor="name" />
