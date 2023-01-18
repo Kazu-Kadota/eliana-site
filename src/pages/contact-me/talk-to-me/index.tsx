@@ -3,7 +3,6 @@ import {
   FaWhatsapp,
   FaLinkedin,
 } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
 
 import { ContactType } from 'src/types/contact-me'
 import Instagram from 'src/assets/icons/colorful-instagram.png'
@@ -16,18 +15,18 @@ const contact: ContactType[] = [
     Icon: FaWhatsapp,
     content: '(11)97662-8899',
     color: '#2BB741',
-    link: '#',
+    link: 'https://wa.me/5511976628899',
   },
   {
     Icon: FaLinkedin,
     content: '/elianapita',
     color: '#0e76a8',
-    link: '#',
+    link: 'https://www.linkedin.com/in/elianapita',
   },
   {
     Icon: Instagram,
     content: '/elianapitaa',
-    link: '#',
+    link: 'https://www.instagram.com/elianapitaa',
   },
 ]
 
@@ -41,9 +40,9 @@ const TalkToMe: React.FC = () => {
       if (typeof Icon === 'string') {
         return (
           <RowContent key={content}>
-            <Link to={link}>
+            <a href={link} target="_blank" rel="noreferrer noopener">
               <Image src={Icon} sizes={iconSize} className='image'/>
-            </Link>
+            </a>
             <p>{content}</p>
           </RowContent>
         )
@@ -51,9 +50,9 @@ const TalkToMe: React.FC = () => {
 
       return (
         <RowContent key={content}>
-          <Link to={link}>
+          <a href={link} target="_blank" rel="noreferrer noopener">
             <Icon size={iconSize} color={color} className='image'/>
-          </Link>
+          </a>
           <p>{content}</p>
         </RowContent>
       )
