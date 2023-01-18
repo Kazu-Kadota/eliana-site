@@ -32,9 +32,10 @@ export const Pages = styled.div`
       object-position: 0% 30%;
     }
 
-    /* @media (${screens.min_sizes.sp_sm}) and (${screens.max_sizes.sp_sm}) {
-      min-height: 40rem;
-    } */
+    @media (${screens.min_sizes.sp_lg}) {
+      max-height: none;
+      height: 35vh;
+    }
 
     @media (${screens.min_sizes.dt_sm}) {
       object-position: 50% 40%;
@@ -77,6 +78,7 @@ export const Box = styled.div`
     color: ${colors.base.blue.shade_1};
     font-size: ${font_sizes.sp.lg};
     text-align: left;
+    padding: 1rem;
 
     @media (${screens.min_sizes.sp_sm}) {
       font-size: ${font_sizes.sp.xl};
@@ -97,15 +99,16 @@ export const Box = styled.div`
   }
 
   & > p {
-    font-size: ${font_sizes.sp.sm};
+    width: 100%;
+    font-size: ${font_sizes.sp.md};
     text-align: justify;
 
     @media (${screens.min_sizes.sp_sm}) {
-      font-size: ${font_sizes.sp.md};
+      font-size: ${font_sizes.sp.lg};
     }
 
     @media (${screens.min_sizes.sp_lg}) {
-      font-size: ${font_sizes.sp.lg};
+      font-size: ${font_sizes.sp.xl};
     }
 
     @media (${screens.min_sizes.dt_sm}) {

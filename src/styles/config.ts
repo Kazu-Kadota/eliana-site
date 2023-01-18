@@ -56,18 +56,18 @@ const config = {
   screens: {
     sizes: {
       sp_sm: '30rem',
-      sp_lg: '76.8rem',
+      sp_lg: '70rem',
       dt_sm: '102.4rem',
       dt_lg: '144rem',
     },
     min_sizes: {
       sp_sm: 'min-width: 300px',
-      sp_lg: 'min-width: 768px',
+      sp_lg: 'min-width: 700px',
       dt_sm: 'min-width: 1024px',
       dt_lg: 'min-width: 1440px',
     },
     max_sizes: {
-      sp_sm: 'max-width: 767px',
+      sp_sm: 'max-width: 699px',
       sp_lg: 'max-width: 1023px',
       dt_sm: 'max-width: 1439px',
     }
