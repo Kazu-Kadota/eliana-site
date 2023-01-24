@@ -1,12 +1,15 @@
 import React from 'react'
 
 import BasicPages from 'src/components/common/basic-pages'
+import { LandingCarousel } from './carousel/index'
+import config from 'src/styles/config'
 
-import { Carousel } from './carousel'
 import { page_2, page_3, page_4 } from './content-pages/pages'
 import { MainPageRender } from './main-page'
 import { PhotoColectionRender } from './photo-colection'
 import { Container } from './styles'
+
+const colors = config.theme.colors
 
 export const Landing: React.FC = () => {
 
@@ -17,7 +20,7 @@ export const Landing: React.FC = () => {
       <BasicPages page_config={page_3}/>
       <BasicPages page_config={page_4}/>
       <PhotoColectionRender />
-      <Carousel />
+      <LandingCarousel color={colors.base.background.color_1}/>
     </Container>
   )
 }

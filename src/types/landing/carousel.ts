@@ -1,6 +1,12 @@
 export interface Testimony {
-  name: string
+  index: number
   last_name?: string
   message: string
-  index: number
+  name: string
+  stars?: number
+}
+
+export interface CarouselContent {
+  color: string,
+  testimonies: Testimony[]
 }
