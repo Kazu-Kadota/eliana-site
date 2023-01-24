@@ -8,7 +8,7 @@ type Color = {
   color: string
 }
 
-export const LandingCarousel: React.FC<Color> = ({color}) => {
+export const BookCarousel: React.FC<Color> = ({color}) => {
   return (
     <>
       <Carousel color={color} testimonies={testimonies}/>

@@ -93,7 +93,7 @@ export const ReactCarouselContainer = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   background: ${colors.others.white};
-  padding: 0 2.5rem;
+  padding: 1rem 2.5rem;
 
   @media (${screens.min_sizes.dt_sm}) {
     min-height: ${carouselDesktopMinHeightSize};
@@ -127,5 +127,31 @@ export const ReactCarouselContainer = styled.div`
     @media (${screens.min_sizes.dt_sm}) {
       font-size: ${font_sizes.dt.sm};
     }
+  }
+`
+
+export const StarsContainer = styled.div`
+  & > h1 {
+    margin: 2rem 0;
+    font-size: ${font_sizes.sp.lg};
+
+    @media (${screens.min_sizes.sp_lg}) {
+      font-size: ${font_sizes.sp.xl};
+    }
+
+    @media (${screens.min_sizes.dt_sm}) {
+      font-size: ${font_sizes.dt.sm};
+    }
+  }
+`
+
+export const StarsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: ${colors.others.white};
+
+  @media (${screens.min_sizes.dt_sm}) {
+    min-height: 1rem;
   }
 `
