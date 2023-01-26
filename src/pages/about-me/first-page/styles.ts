@@ -17,6 +17,7 @@ export const Container = styled(Pages)`
   }
 
   & > img {
+    max-width: 20rem;
     object-position: 25% 30%;
 
     @media (${screens.min_sizes.dt_sm}) {

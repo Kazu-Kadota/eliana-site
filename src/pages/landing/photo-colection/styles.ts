@@ -4,13 +4,11 @@ import config from 'src/styles/config'
 const colors = config.theme.colors
 const font_sizes = config.theme.font_sizes
 const screens = config.screens
-const variable = config.var
 
 export const PhotoColection = styled.div`
   position: relative;
   width: calc(100% -10rem);
   max-height: 200vh;
-  min-height: calc(100vh - ${variable.header_height});
   height: 100%;
   padding: 0 5rem;
   display: flex;
@@ -68,6 +66,10 @@ export const PhotoWrapper = styled.div`
   width: 100%;
   max-width: 30rem;
 
+  @media (orientation: landscape) {
+    flex-direction: row;
+  }
+
   @media (${screens.min_sizes.dt_sm}) {
     flex-direction: row;
     max-width: 144rem;
@@ -84,6 +86,7 @@ export const ContentBlock = styled.div`
 `
 
 export const ImagesBlock = styled.img`
+  min-width: 20rem;
   width: 100%;
   min-height: 20rem;
   height: 100%;
