@@ -4,13 +4,12 @@ import config from 'src/styles/config'
 
 const colors = config.theme.colors
 const font_sizes = config.theme.font_sizes
-const variable = config.var
 const screens = config.screens
 
 export const Pages = styled.div`
   position: relative;
   width: 100%;
-  height: calc(100vh - ${variable.header_height});
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -22,11 +21,19 @@ export const Pages = styled.div`
     width: 75vw;
     max-height: 30rem;
     height: 30vh;
-    margin-bottom: 2rem;
+    margin: 3rem 0;
     object-fit: cover;
     object-position: 0% 25%;
     border-radius: 1.5rem;
     box-shadow: 0.5rem 0.5rem 1.0rem .2rem rgba(0, 0, 0, 0.3);
+
+    @media (orientation: landscape) {
+      min-height: 30vw;
+      object-position: 50% 40%;
+      width: auto;
+      max-height: 70rem;
+      height: 60vh;
+    }
 
     @media (min-width: 660px) {
       object-position: 0% 30%;
@@ -42,6 +49,7 @@ export const Pages = styled.div`
       width: auto;
       max-height: 70rem;
       height: 60vh;
+      margin: 0;
     }
 
     @media (${screens.min_sizes.dt_lg}) {
@@ -49,15 +57,21 @@ export const Pages = styled.div`
     }
   }
 
+  @media (orientation: landscape) {
+    flex-direction: row;
+  }
+
   @media (${screens.min_sizes.dt_sm}) {
     flex-direction: row;
+    padding: 5rem 0;
   }
 `
 
 export const Box = styled.div`
   max-width: 50rem;
   width: 75vw;
-  height: 40rem;
+  height: 100%;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -67,6 +81,7 @@ export const Box = styled.div`
     max-width: 80rem;
     width: 50rem;
     height: 60vh;
+    padding: 0;
   }
 
   @media (${screens.min_sizes.dt_lg}) {
@@ -79,6 +94,7 @@ export const Box = styled.div`
     font-size: ${font_sizes.sp.lg};
     text-align: left;
     padding: 1rem;
+    margin: 2rem 0;
 
     @media (${screens.min_sizes.sp_sm}) {
       font-size: ${font_sizes.sp.xl};
@@ -89,6 +105,7 @@ export const Box = styled.div`
     }
 
     @media (${screens.min_sizes.dt_sm}) {
+      margin: 0;
       font-size: ${font_sizes.dt.xl};
       text-align: right;
     }
@@ -100,6 +117,7 @@ export const Box = styled.div`
 
   & > p {
     width: 100%;
+    margin: 2rem 0;
     font-size: ${font_sizes.sp.md};
     text-align: justify;
 
@@ -112,6 +130,7 @@ export const Box = styled.div`
     }
 
     @media (${screens.min_sizes.dt_sm}) {
+      margin: 0;
       font-size: ${font_sizes.dt.sm};
     }
 
@@ -122,10 +141,12 @@ export const Box = styled.div`
 
   & > a {
     display: block;
+    margin: 2rem 0;
     font-size: ${font_sizes.sp.xl};
     color: ${colors.secondary.orange.shade_1};
 
     @media (${screens.min_sizes.dt_sm}) {
+      margin: 0;
       font-size: ${font_sizes.dt.sm};
     }
 
@@ -140,6 +161,7 @@ export const Box = styled.div`
       min-height: 4rem;
       max-height: 6rem;
       height: 7vh;
+      margin: 2rem 0;
       border: none;
       border-radius: 5rem;
       cursor: pointer;
@@ -149,6 +171,7 @@ export const Box = styled.div`
       @media (${screens.min_sizes.dt_sm}) {
         width: 50rem;
         height: 6rem;
+        margin: 0;
       }
 
       @media (${screens.min_sizes.dt_lg}) {
@@ -187,6 +210,7 @@ export const Box = styled.div`
     min-height: 4rem;
     max-height: 6rem;
     height: 7vh;
+    margin: 2rem 0;
     border: none;
     border-radius: 5rem;
     cursor: pointer;
@@ -196,6 +220,7 @@ export const Box = styled.div`
     @media (${screens.min_sizes.dt_sm}) {
       width: 50rem;
       height: 6rem;
+      margin: 0;
     }
 
     @media (${screens.min_sizes.dt_lg}) {

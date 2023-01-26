@@ -32,7 +32,7 @@ const contents: BasicPage[] = [
       p2: 'Quer aprender mais sobre feedback? Então aproveita que você já está por aqui e clica agora mesmo!',
     },
     link: {
-      button: 'https://www.amazon.com.br/Como-Dizer-Arte-Receber-Feedback/dp/8541401073',
+      button: 'https://www.amazon.com.br/Como-dizer-arte-receber-feedback-ebook/dp/B09TQVWBXZ',
       external: true,
     }
   },

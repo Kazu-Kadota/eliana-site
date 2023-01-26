@@ -10,6 +10,7 @@ const variable = config.var
 export const MainPage = styled.div`
   position: relative;
   width: 100%;
+  min-height: 50rem;
   height: calc(100vh - ${variable.header_height});
   display: flex;
   justify-content: center;
@@ -18,6 +19,7 @@ export const MainPage = styled.div`
   & > img {
     position: absolute;
     width: 100%;
+    min-height: 50rem;
     height: calc(100vh - ${variable.header_height});
     object-fit: cover;
     object-position: 50% 0%;
