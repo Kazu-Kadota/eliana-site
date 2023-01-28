@@ -1,17 +1,19 @@
+import { ThemeProvider } from '@mui/material'
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom'
 import App from './App'
+import theme from './styles/mui-global'
 import reportWebVitals from './reportWebVitals'
 import GlobalStyle from './styles/GlobalStyle'
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-)
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <App />
-  </React.StrictMode>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <App />
+    </ThemeProvider>
+  </React.StrictMode>,
+  document.getElementById('root') as HTMLElement
 )
 
 // If you want to start measuring performance in your app, pass a function
