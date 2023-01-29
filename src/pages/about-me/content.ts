@@ -18,12 +18,12 @@ const content: BasicPage[] = [
     background_color: colors.base.background.color_1,
     image: photo_page_2,
     text: {
-      p1: '? Eu trabalho para acelerar a sua carreira e recolocação, direcionando suas forças, talentos, foco e energia de maneira estratégica.',
-      p2: '? Faço isso através de uma curadoria das melhores estratégias de carreira e desenvolvimento pessoal, para te ajudar a chegar mais rápido onde você deseja.',
-      p3: 'Borá trabalhar juntos?'
+      p1: 'Eu trabalho para acelerar a sua carreira e recolocação, direcionando suas forças, talentos, foco e energia de maneira estratégica.',
+      p2: 'Faço isso através de uma curadoria das melhores estratégias de carreira e desenvolvimento pessoal, para te ajudar a chegar mais rápido onde você deseja.',
     },
     link: {
       button: '/mentorias',
+      content: 'Bora trabalhar juntos?'
     }
   },
 ]

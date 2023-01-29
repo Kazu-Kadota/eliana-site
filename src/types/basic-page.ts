@@ -11,6 +11,7 @@ export interface PageLink {
   a: string
   button: string
   external: boolean
+  content: string
 }
 
 export interface BasicPage {

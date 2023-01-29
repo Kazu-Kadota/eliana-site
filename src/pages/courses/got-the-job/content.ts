@@ -52,6 +52,7 @@ const content: BasicPage[] = [
     },
     link: {
       button: '/',
+      content: 'Passar na entrevista!'
     }
   },
 ]

@@ -44,6 +44,7 @@ const content: BasicPage[] = [
     },
     link: {
       button: '/',
+      content: 'Descobrir minhas forças!'
     }
   },
 ]
