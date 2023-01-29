@@ -15,6 +15,7 @@ export const page_2: BasicPage = {
   },
   link: {
     a: '/sobre-mim',
+    content: 'Saiba mais',
   }
 }
 
@@ -27,6 +28,7 @@ export const page_3: BasicPage = {
   },
   link: {
     a: '/contato',
+    content: 'Saiba mais',
   }
 }
 
@@ -39,5 +41,6 @@ export const page_4: BasicPage = {
   },
   link: {
     button: '/livro',
+    content: 'Saiba mais',
   }
 }

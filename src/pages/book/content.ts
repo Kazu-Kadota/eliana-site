@@ -34,6 +34,7 @@ const contents: BasicPage[] = [
     link: {
       button: 'https://www.amazon.com.br/Como-dizer-arte-receber-feedback-ebook/dp/B09TQVWBXZ',
       external: true,
+      content: 'Clique aqui!'
     }
   },
 ]

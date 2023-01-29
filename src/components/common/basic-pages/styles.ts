@@ -117,7 +117,7 @@ export const Box = styled.div`
 
   & > p {
     width: 100%;
-    margin: 2rem 0;
+    margin: 1rem 0;
     font-size: ${font_sizes.sp.md};
     text-align: justify;
 
@@ -171,11 +171,11 @@ export const Box = styled.div`
       @media (${screens.min_sizes.dt_sm}) {
         width: 50rem;
         height: 6rem;
-        margin: 0;
       }
 
       @media (${screens.min_sizes.dt_lg}) {
         height: 8rem;
+        margin: 0;
       }
     }
 
@@ -220,11 +220,11 @@ export const Box = styled.div`
     @media (${screens.min_sizes.dt_sm}) {
       width: 50rem;
       height: 6rem;
-      margin: 0;
     }
 
     @media (${screens.min_sizes.dt_lg}) {
       height: 8rem;
+      margin: 0;
     }
   }
 

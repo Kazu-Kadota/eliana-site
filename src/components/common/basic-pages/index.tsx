@@ -68,7 +68,7 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
               {p3}
               {p4}
               {p5}
-              <a href={page_config.link?.a}>Saiba mais</a>
+              <a href={page_config.link?.a}>{page_config.link.content}</a>
             </Box>
             <img src={page_config.image} />
           </>
@@ -83,7 +83,7 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
             {p3}
             {p4}
             {p5}
-            <Link to={page_config.link?.a}>Saiba mais</Link>
+            <Link to={page_config.link?.a}>{page_config.link.content}</Link>
           </Box>
           <img src={page_config.image} />
         </>
@@ -101,7 +101,7 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
               {p5}
               <a href={page_config.link.button} target="_blank" rel="noreferrer noopener">
                 <button>
-                  <h3>Saiba mais</h3>
+                  <h3>{page_config.link.content}</h3>
                 </button>
               </a>
             </Box>
@@ -119,7 +119,7 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
             {p4}
             {p5}
             <button onClick={redirectPage}>
-              <h3>Saiba mais</h3>
+              <h3>{page_config.link.content}</h3>
             </button>
           </Box>
           <img src={page_config.image} />
