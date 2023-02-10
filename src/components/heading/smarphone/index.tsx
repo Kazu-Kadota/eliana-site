@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from 'react'
 import { Collapse } from 'react-collapse'
 
-import { HeaderListContentType } from 'src/types/heading'
 import { ChevronArrowIcon } from '../styles'
+import { HeaderListContentType } from '@/types/heading'
 
 import {
   HeaderMenuButtonListContent,

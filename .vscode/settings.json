@@ -32,4 +32,6 @@
     "source.fixAll.eslint": true,
   },
   "editor.tabSize": 2,
+  "css.validate": false,
+  "scss.validate": false
 }

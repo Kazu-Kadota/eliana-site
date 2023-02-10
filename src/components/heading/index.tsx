@@ -1,9 +1,14 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import React, { createContext, useState } from 'react'
 import { Collapse } from 'react-collapse'
 import { IoMdMenu } from 'react-icons/io'
 
-import logo from 'src/assets/images/header/eliana-pita-consultoria.svg'
+import headerList from '@/contents/heading/content'
+import logo from 'public/assets/images/header/eliana-pita-consultoria.svg'
 
+import HeaderDesktopList from './desktop'
+import HeaderSmartPhoneList from './smarphone'
 import {
   HeaderBlock,
   Container,
@@ -11,10 +16,6 @@ import {
   HeaderMenuButton,
   HeaderMenuButtonList,
 } from './styles'
-import headerList from './content'
-import HeaderDesktopList from './desktop'
-import HeaderSmartPhoneList from './smarphone'
-import { Link } from 'react-router-dom'
 
 interface ShownDesktopStateType {
   isShownDesktop: boolean
@@ -23,10 +24,10 @@ interface ShownDesktopStateType {
 
 export const ShownDesktopContext = createContext<ShownDesktopStateType>({
   isShownDesktop: false,
-  setShownDesktop: () => {false}
+  setShownDesktop: () => {false},
 })
 
-export const Header: React.FC = () => {
+const Header: React.FC = () => {
   const [isShownDesktop, setShownDesktop] = useState(false)
   const [isShownSmartPhone, setShownSmartPhone] = useState(false)
 
@@ -34,13 +35,13 @@ export const Header: React.FC = () => {
     <>
       <HeaderBlock>
         <Container>
-          <Link to='/'>
-            <img src={logo} alt="" />
+          <Link href='/'>
+            <Image src={logo} alt='' />
           </Link>
           <HeaderList>
             <ShownDesktopContext.Provider value={{
               isShownDesktop,
-              setShownDesktop
+              setShownDesktop,
             }}>
               {headerList.map((content) => (
                 <HeaderDesktopList key={content.title} content={content}/>
@@ -67,3 +68,5 @@ export const Header: React.FC = () => {
     </>
   )
 }
+
+export default Header

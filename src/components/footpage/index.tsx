@@ -1,12 +1,10 @@
 import React from 'react'
 
-import { DownsideRender } from './downside'
-import { UpsideRender } from './upside'
-import {
-  Container,
-} from './styles'
+import DownsideRender from './downside'
+import { Container } from './styles'
+import UpsideRender from './upside'
 
-export const Footerpage = () => {
+const Footerpage = () => {
   return (
     <Container>
       <UpsideRender />
@@ -14,3 +12,5 @@ export const Footerpage = () => {
     </Container>
   )
 }
+
+export default Footerpage

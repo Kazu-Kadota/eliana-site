@@ -1,12 +1,13 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import {
   FaWhatsapp,
   FaLinkedin,
   FaInstagram,
 } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
 
-import logo from 'src/assets/images/footpage/logo.svg'
+import logo from 'public/assets/images/footpage/logo.svg'
 
 import {
   DownSide,
@@ -14,12 +15,13 @@ import {
   RightContent,
 } from './styles'
 
-export const DownsideRender: React.FC = () => {
+
+const DownsideRender: React.FC = () => {
   return (
     <>
       <DownSide>
-        <Link to='/'>
-          <img src={logo}></img>
+        <Link href='/'>
+          <Image src={logo} alt=''/>
         </Link>
         <RightContent>
           <Icons>
@@ -39,3 +41,5 @@ export const DownsideRender: React.FC = () => {
     </>
   )
 }
+
+export default DownsideRender

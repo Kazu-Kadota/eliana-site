@@ -1,7 +1,9 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import Redirect from 'next/link'
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
 
-import { BasicPage } from 'src/types/basic-page'
+import { BasicPage } from '@/types/basic-page'
 
 import {
   Pages,
@@ -13,15 +15,9 @@ interface BasicPageType {
 }
 
 const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
-  const navigate = useNavigate()
-
   const redirectPage = () => {
-    navigate(
-      `${page_config.link?.button}`,
-      {
-        replace: true,
-        relative: 'path',
-      }
+    return (
+      <Redirect href={page_config.link?.button ?? ''}/>
     )
   }
 
@@ -70,7 +66,7 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
               {p5}
               <a href={page_config.link?.a}>{page_config.link.content}</a>
             </Box>
-            <img src={page_config.image} />
+            <Image src={page_config.image ?? ''} alt='' priority={true}/>
           </>
         )
       }
@@ -83,9 +79,9 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
             {p3}
             {p4}
             {p5}
-            <Link to={page_config.link?.a}>{page_config.link.content}</Link>
+            <Link href={page_config.link?.a}>{page_config.link.content}</Link>
           </Box>
-          <img src={page_config.image} />
+          <Image src={page_config.image ?? ''} alt='' priority={true}/>
         </>
       )
     } else if (page_config.link?.button) {
@@ -99,13 +95,13 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
               {p3}
               {p4}
               {p5}
-              <a href={page_config.link.button} target="_blank" rel="noreferrer noopener">
+              <Link href={page_config.link.button} target="_blank" rel="noreferrer noopener">
                 <button>
                   <h3>{page_config.link.content}</h3>
                 </button>
-              </a>
+              </Link>
             </Box>
-            <img src={page_config.image} />
+            <Image src={page_config.image ?? ''} alt='' priority={true}/>
           </>
         )
       }
@@ -118,11 +114,14 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
             {p3}
             {p4}
             {p5}
-            <button onClick={redirectPage}>
-              <h3>{page_config.link.content}</h3>
-            </button>
+            {/* <button onClick={redirectPage}> */}
+            <Link href={page_config.link.button}>
+              <button onClick={redirectPage}>
+                <h3>{page_config.link.content}</h3>
+              </button>
+            </Link>
           </Box>
-          <img src={page_config.image} />
+          <Image src={page_config.image ?? ''} alt='' priority={true}/>
         </>
       )
     }
@@ -137,7 +136,7 @@ const BasicPages: React.FC<BasicPageType> = ({page_config}) => {
             {p4}
             {p5}
         </Box>
-        <img src={page_config.image} />
+        <Image src={page_config.image ?? ''} alt='' priority={true}/>
       </>
     )
   }

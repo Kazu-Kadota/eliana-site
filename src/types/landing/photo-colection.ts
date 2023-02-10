@@ -1,5 +1,7 @@
+import { StaticImageData } from 'next/image'
+
 export interface PhotoColectionContent {
-  image: string
+  image: StaticImageData
   content: string
   url: string
 }

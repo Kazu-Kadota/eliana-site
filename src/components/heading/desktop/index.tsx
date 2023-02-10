@@ -1,9 +1,9 @@
+import Link from 'next/link'
 import React, { useState } from 'react'
 import { Collapse } from 'react-collapse'
-import { Link } from 'react-router-dom'
 
-import { HeaderListContentType } from 'src/types/heading'
 import { ChevronArrowIcon } from '../styles'
+import { HeaderListContentType } from '@/types/heading'
 
 import {
   HeaderButtonList,
@@ -38,7 +38,7 @@ const HeaderDesktopList: React.FC<HeaderDesktopListProps> = ({ content }) => {
         <Collapse isOpened={isSubListShown}>
           {content.subList.map((sublist) => (
             <HeaderSubListContent key={sublist.title}>
-              <Link to={sublist.link}>{sublist.title}</Link>
+              <Link href={sublist.link}>{sublist.title}</Link>
             </HeaderSubListContent>
           ))}
         </Collapse>

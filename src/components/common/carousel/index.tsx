@@ -1,7 +1,9 @@
 import React from 'react'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { Carousel as ReactCarousel } from 'react-responsive-carousel'
 import { FaStar } from 'react-icons/fa'
+import { Carousel as ReactCarousel } from 'react-responsive-carousel'
+
+import { CarouselContent, Testimony } from '@/types/landing/carousel'
 
 import {
   CarouselBackground,
@@ -12,11 +14,10 @@ import {
   StarsContainer,
   StarsWrapper,
 } from './styles'
-import { CarouselContent, Testimony } from 'src/types/landing/carousel'
 
 const Star: JSX.Element = <FaStar color='#ffa41c' size={24}/>
 
-export const Carousel: React.FC<CarouselContent> = ({color, testimonies}) => {
+const Carousel: React.FC<CarouselContent> = ({color, testimonies}) => {
   const renderContent = (testimony: Testimony) => {
     if (testimony.stars) {
       let stars: JSX.Element | undefined = undefined
@@ -86,3 +87,5 @@ export const Carousel: React.FC<CarouselContent> = ({color, testimonies}) => {
     </>
   )
 }
+
+export default Carousel
