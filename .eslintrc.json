@@ -1,0 +1,55 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+      "react-hooks/rules-of-hooks": 0,
+      "import/order": [
+        "error",
+        {
+          "alphabetize": {
+            "order": "asc",
+            "caseInsensitive": true
+          },
+          "newlines-between": "always-and-inside-groups",
+          "pathGroups": [
+            {
+              "pattern": "@/**",
+              "group": "internal"
+            }
+          ],
+          "groups": [
+            [
+              "builtin",
+              "external"
+            ],
+            [
+              "internal",
+              "parent",
+              "unknown",
+              "object",
+              "type"
+            ],
+            [
+              "index",
+              "sibling"
+            ]
+          ]
+        }
+      ],
+      "key-spacing": [
+        "error",
+        {
+          "afterColon": true
+        }
+      ],
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "always-multiline",
+          "objects": "always-multiline",
+          "imports": "always-multiline",
+          "exports": "always-multiline",
+          "functions": "always-multiline"
+        }
+      ]
+    }
+}

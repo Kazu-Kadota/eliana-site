@@ -1,6 +1,7 @@
+import Image from 'next/image'
 import React from 'react'
 
-import ebookImage from 'src/assets/images/contact-me/ebook.png'
+import ebookImage from 'public/assets/images/contact-me/ebook.png'
 
 import {
   Container,
@@ -24,7 +25,7 @@ const Ebook: React.FC = () => {
           <input type="submit" value="Ganhar ebook!"></input>
         </EbookForms>
       </EbookContainer>
-      <img src={ebookImage} />
+      <Image src={ebookImage} alt='' priority={true}/>
     </Container>
   )
 }

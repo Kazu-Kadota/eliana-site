@@ -3,33 +3,33 @@ const config = {
     colors: {
       base: {
         background: {
-          color_1 : '#F0EBE0',
-          color_2 : '#EEE2CE',
+          color_1: '#F0EBE0',
+          color_2: '#EEE2CE',
         },
         blue: {
-          shade_1 : '#2F4269',
-          shade_2 : '#556380',
-          shade_3 : '#7C8598',
-          shade_4 : '#A3A8B0',
+          shade_1: '#2F4269',
+          shade_2: '#556380',
+          shade_3: '#7C8598',
+          shade_4: '#A3A8B0',
         },
       },
       secondary: {
         orange: {
-          shade_1 : '#BC4E27',
-          shade_2 : '#C66D4C',
-          shade_3 : '#D08C71',
-          shade_4 : '#DBAC96',
+          shade_1: '#BC4E27',
+          shade_2: '#C66D4C',
+          shade_3: '#D08C71',
+          shade_4: '#DBAC96',
         },
         yellow: {
-          shade_1 : '#E7B46C',
-          shade_2 : '#E8BF83',
-          shade_3 : '#EACA9A',
-          shade_4 : '#ECD5B2',
-        }
+          shade_1: '#E7B46C',
+          shade_2: '#E8BF83',
+          shade_3: '#EACA9A',
+          shade_4: '#ECD5B2',
+        },
       },
       others: {
-        lightGray : '#EEE',
-        white : '#FFF',
+        lightGray: '#EEE',
+        white: '#FFF',
       },
     },
     font_sizes: {
@@ -50,8 +50,8 @@ const config = {
         lg: '3.6rem',
         xl: '4rem',
         xxl: '4.8rem',
-      }
-    }
+      },
+    },
   },
   screens: {
     sizes: {
@@ -70,7 +70,7 @@ const config = {
       sp_sm: 'max-width: 699px',
       sp_lg: 'max-width: 1023px',
       dt_sm: 'max-width: 1439px',
-    }
+    },
   },
   var: {
     header_height: '6.2rem',

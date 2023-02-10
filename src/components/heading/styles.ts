@@ -1,7 +1,7 @@
+import { RiArrowDropDownLine } from 'react-icons/ri'
 import styled from 'styled-components'
 
-import config from 'src/styles/config'
-import { RiArrowDropDownLine } from 'react-icons/ri'
+import config from '@/styles/config'
 
 const colors = config.theme.colors
 const font_sizes = config.theme.font_sizes

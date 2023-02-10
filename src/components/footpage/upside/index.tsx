@@ -1,23 +1,26 @@
+import Link from 'next/link'
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-import contents from './upside_content'
+import contents from '@/contents/footpage/upside_content'
+
 import {
   ColumnContent,
-  Upside
+  Upside,
 } from './styles'
 
-export const UpsideRender = () => {
+const UpsideRender = () => {
   return (
     <Upside>
       {contents.map((content) => (
         <ColumnContent key={content.title}>
           <h4>{content.title}</h4>
           {content.links.map((link) => (
-            <Link to={link.url} key={link.content}>{link.content}</Link>
+            <Link href={link.url} key={link.content}>{link.content}</Link>
           ))}
         </ColumnContent>
       ))}
     </Upside>
   )
 }
+
+export default UpsideRender

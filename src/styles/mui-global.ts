@@ -31,9 +31,9 @@ const theme = createTheme({
       main: '#2F4269',
     },
     secondary: {
-      main: '#BC4E27'
-    }
-  }
+      main: '#BC4E27',
+    },
+  },
 })
 
 export default theme

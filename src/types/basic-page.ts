@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image'
+
 export interface TextTypes {
   h1: string
   p1: string
@@ -16,9 +18,11 @@ export interface PageLink {
 
 export interface BasicPage {
   background_color: string
-  image?: string
-  text?: Partial<TextTypes>
+  image?: StaticImageData
+  index: string | number
   link?: Partial<PageLink>
+  priority?: boolean
+  text?: Partial<TextTypes>
 }
 
 export interface PhotoColectionContent {

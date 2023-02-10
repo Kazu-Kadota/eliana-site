@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
-import DefaultBackground from 'src/assets/images/background/default.svg'
-import config from 'src/styles/config'
+import config from '@/styles/config'
 
 const colors = config.theme.colors
 const font_sizes = config.theme.font_sizes
@@ -16,7 +15,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: url(${DefaultBackground});
+  background-image: url('/assets/images/background/default.svg');
 
   @media (${screens.min_sizes.dt_sm}) {
     max-height: calc(100vh - ${variable.header_height});
